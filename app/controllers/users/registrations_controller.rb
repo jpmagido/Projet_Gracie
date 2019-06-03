@@ -13,8 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    @user = User.create(users_params)
-
+    User.create(users_params)
   end
 
   # GET /resource/edit
@@ -64,7 +63,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
     def users_params
-      params.require(:user).permit(:first_name,:last_name,:age, :phone, :profession, :nationality, :weight, :belt)
+      params.require(:user).permit(:first_name,:last_name, :age, :phone, :profession, :nationality, :weight, :belt)
     end
 
 end
