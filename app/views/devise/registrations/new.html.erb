@@ -35,13 +35,8 @@
 
   <div class="field">
     <%= f.label :belt %><br />
-    <select name="<%= f.text_field :belt %>">
-      <option value="blanche">Blanche</option>
-      <option value="bleue">Bleue</option>
-      <option value="violette">Violette</option>
-      <option value="marron">Marron</option>
-      <option value="noir">Noir</option>
-    </select>
+    <%= f.select(:belt, ["Blanche", "Bleue", "Violette", "Marron", "Noire"]) %>
+
   </div>
 
   <div class="field">
