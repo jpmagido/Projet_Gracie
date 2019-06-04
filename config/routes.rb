@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/static_lp'
+  get 'pages/secret_page'
   get 'pages/admin_interface'
   root 'pages#landing_page'
   #root to: 'home#index'

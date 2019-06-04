@@ -47,21 +47,31 @@
 	border-bottom: solid;
 	border-width: 1px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: row;
+	font-weight: bold;
+	font-size: large;
 
 }
 .div-admin-table-2{
 	display: flex;
-	justify-content: space-between;
+	justify-content: row;
 }
 
 .div-admin-table-1{
 	
 	border-right: solid;
 	border-width: 1px;
-	width: 160px;
+	width: 150px;
 	min-width: 60px;
-	padding: 1px 3px 1px 0;
+	padding: 1px 3px 1px 10px;
+	
+}
+.div-admin-table-1-long{
+	border-right: solid;
+	border-width: 1px;
+	width: 250px;
+	min-width: 60px;
+	padding: 1px 3px 1px 10px;
 	
 }
 .div-admin-table-1-bis{
@@ -70,23 +80,23 @@
 	border-width: 1px;
 	width: 35px;
 	min-width: 30px;
-	padding: 1px 3px 1px 3px;
+	padding: 1px 3px 1px 10px;
 }
 
 .div-admin-table-bis-2{
 	border-right: solid;
 	border-width: 1px;
-	width: 65px;
+	width: 70px;
 	min-width: 60px;
-	padding: 1px 3px 1px 0;
+	padding: 1px 3px 1px 10px;
 	font-weight: bold;
 }
 .div-admin-table-bis-3{
 	border-right: solid;
 	border-width: 1px;
-	width: 85px;
+	width: 95px;
 	min-width: 60px;
-	padding: 1px 3px 1px 3px;
+	padding: 1px 3px 1px 10px;
 }
 
 
