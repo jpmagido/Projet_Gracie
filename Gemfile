@@ -8,7 +8,11 @@ gem 'faker'
 gem 'stripe'
 gem 'better_errors'
 gem 'devise'
-gem "binding_of_caller"
+gem 'binding_of_caller'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'sendgrid-ruby'
+gem 'paypal-sdk-rest'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -56,6 +60,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener'
 end
 
 group :test do

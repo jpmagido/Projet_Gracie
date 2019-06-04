@@ -15,3 +15,21 @@
  *= require bootstrap/css/bootstrap.min
  *= require agency.min
  */
+
+/*  STRIPE START*/
+.container-charges{
+	display: flex;
+	
+	height: 300px;
+	align-items: center;
+
+}
+
+.container-1-charges{
+	margin: auto;
+	text-align: center;
+	border: solid;
+	border-width: 1px;
+	padding: 15px;
+}
+/*  STRIPE END*/
