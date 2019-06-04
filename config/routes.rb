@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/static_lp'
+  get 'pages/admin_interface'
   root 'pages#landing_page'
   #root to: 'home#index'
   devise_for :users

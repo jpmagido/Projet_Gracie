@@ -33,3 +33,78 @@
 	padding: 15px;
 }
 /*  STRIPE END*/
+
+/*   ADMIN DASHBOARD */
+
+.div-main{
+	border-top: solid;
+	border-bottom: solid;
+	border-left: solid;
+	border-width: 1px;
+	margin: 20px 5px 20px 5px;
+}
+.div-admin-table{
+	border-bottom: solid;
+	border-width: 1px;
+	display: flex;
+	justify-content: space-between;
+
+}
+.div-admin-table-2{
+	display: flex;
+	justify-content: space-between;
+}
+
+.div-admin-table-1{
+	
+	border-right: solid;
+	border-width: 1px;
+	width: 160px;
+	min-width: 60px;
+	padding: 1px 3px 1px 0;
+	
+}
+.div-admin-table-1-bis{
+	
+	border-right: solid;
+	border-width: 1px;
+	width: 35px;
+	min-width: 30px;
+	padding: 1px 3px 1px 3px;
+}
+
+.div-admin-table-bis-2{
+	border-right: solid;
+	border-width: 1px;
+	width: 65px;
+	min-width: 60px;
+	padding: 1px 3px 1px 0;
+	font-weight: bold;
+}
+.div-admin-table-bis-3{
+	border-right: solid;
+	border-width: 1px;
+	width: 85px;
+	min-width: 60px;
+	padding: 1px 3px 1px 3px;
+}
+
+
+
+/*   ADMIN DASHBOARD */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

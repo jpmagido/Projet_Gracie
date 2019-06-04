@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def landing_page
   end
+
+  def admin_interface
+  		@users = User.all
+  end
 end
