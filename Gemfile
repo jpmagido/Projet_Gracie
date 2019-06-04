@@ -12,7 +12,8 @@ gem 'binding_of_caller'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'sendgrid-ruby'
 gem 'paypal-sdk-rest'
-
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
