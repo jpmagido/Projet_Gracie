@@ -9,6 +9,7 @@ gem 'stripe'
 gem 'better_errors'
 gem 'devise'
 gem "binding_of_caller"
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
