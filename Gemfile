@@ -11,6 +11,7 @@ gem 'devise'
 gem 'binding_of_caller'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'sendgrid-ruby'
+gem 'paypal-sdk-rest'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
