@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   get 'pages/static_lp'
   get 'pages/secret_page'
   get 'pages/admin_interface'
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
   	omniauth_callbacks: 'users/omniauth_callbacks'
   }
+  devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :charges
