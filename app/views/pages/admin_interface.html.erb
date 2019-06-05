@@ -1,0 +1,29 @@
+<h1>ADMIN page</h1>
+
+<div class="div-main">
+<div class="div-admin-table">
+	<div class="div-admin-table-1-bis"> ID</div>
+	<div class="div-admin-table-1-long"> Prénom</div>
+	<div class="div-admin-table-1-long"> Nom</div>
+	<div class="div-admin-table-1-long"> Email</div>
+	<div class="div-admin-table-1"> Phone</div>
+	<div class="div-admin-table-bis-3"> Poids</div>
+	<div class="div-admin-table-bis-3"> Ceinture</div>
+	<div class="div-admin-table-1"> Abonnement</div>
+	<div class="div-admin-table-bis-2"> Droits</div>
+</div>
+
+<% @users.each do |v| %>
+<div class="div-admin-table-2">
+			<div class="div-admin-table-1-bis"> <%= v.id %> </div>
+			<div class="div-admin-table-1-long"> <%= if v.first_name != nil; v.first_name.titleize end%></div>
+			<div class="div-admin-table-1-long"> <%= if v.last_name != nil; v.last_name.titleize end %></div>
+			<div class="div-admin-table-1-long"> <%= v.email %></div>
+			<div class="div-admin-table-1"> <%= v.phone %></div>
+			<div class="div-admin-table-bis-3"> <%= v.weight %></div>
+			<div class="div-admin-table-bis-3"> <%= if v.belt != nil; v.belt.titleize end %></div>
+			<div class="div-admin-table-1"> <%= paying_code(v.subscription) %></div>
+			<div class="div-admin-table-bis-2"> <%= rights_code(v.admin_rights) %></div>
+</div>
+<% end %>
+</div>
