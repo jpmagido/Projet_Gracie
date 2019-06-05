@@ -20,6 +20,8 @@ class Admins::PasswordsController < Devise::PasswordsController
   # def update
   #   super
   # end
+  # 
+  
 
   # protected
 

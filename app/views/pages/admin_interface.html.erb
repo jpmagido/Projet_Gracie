@@ -1,5 +1,39 @@
-<h1>ADMIN Gestion des Utilisateurs</h1>
+<div class="div-admin-header">
+	<div>
+	<h1>ADMINISTRATEUR </h1>
 
+ <h2>Gestion des Utilisateurs</h2>
+ 
+</div>
+<div>
+	<%= link_to "Sign out", destroy_admin_session_path, method: :delete, class:"btn btn-warning btn-lg js-scroll-trigger" %>
+</div>
+</div>
+
+<hr>
+<div class="div-admin-main-stats">
+	<div class="div-admin-stats">
+		<div class="div-admin-name">
+			Bonjour Administrateur <%= current_admin.first_name %> <%= current_admin.last_name %>.
+		</div>
+
+		<div>
+			Vous avez <%= @users_number %> Utilisateurs inscrits sur votre site.
+		</div>
+
+		<div>
+			Vous avez <%= @users_no_paid %> Utilisateurs qui n'ont pas réglé la cotisation
+		</div>
+	</div>
+	<div class="div-admin-stats">
+		<div class="div-admin-stats-2">
+			<a class="btn btn-danger btn-lg js-scroll-trigger" href=" #">Creer un Administrateur</a>
+		</div>
+		<div class="div-admin-stats-2">
+			<a class="btn btn-success btn-lg js-scroll-trigger" href=" #">Encaisser un Utilisateur</a>
+		</div>
+	</div>
+</div>
 <div class="div-searsh-bar">
 	<h4>Recherche d'Utilisateurs:</h4>
 	<div class="input-group mb-3">
