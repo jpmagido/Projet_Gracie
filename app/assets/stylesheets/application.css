@@ -16,6 +16,17 @@
  *= require agency.min
  */
 
+
+ /* GLOBAL */
+
+ html, body {
+ 	height: 100%;
+ }
+
+ .form-gap {
+    padding-top: 70px;
+}
+
 /*  STRIPE START*/
 .container-charges{
 	display: flex;
