@@ -47,24 +47,36 @@
 	justify-content: space-between;
 }
 
+.div-admin-stats-data{
+	margin-left: 20px;
+}
 .div-admin-stats{
 	border: solid;
 	border-width: 1px;
 	width: 50%;
-	padding: 20px;
+	
 	margin: 20px;
 	border-radius: 3px;
 }
-.div-admin-stats-2{
-	
-	width: 50%;
+.div-admin-stats-1{
+	width: 250px;
+	margin: 10px;
+}
+.div-admin-stats-bis{
+	margin: 20px 50px 20px 20px;
+	border: solid;
+	border-width: 1px;
+	border-radius: 3px;
 	padding: 20px;
-	margin: 20px;
+}
+
+#form-control-1{
+	margin-top: 5px;
 }
 
 .div-admin-name{
 	font-weight: bold;
-	margin: 5px 0 15px 0;
+	margin: 15px;
 }
 
 .div-main{
