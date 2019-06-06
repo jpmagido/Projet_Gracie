@@ -2,7 +2,7 @@
 
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg  fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
             <a class="nav-link js-scroll-trigger" href="#services">Services</a>
           </li>
           <li class="nav-item">
-<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link js-scroll-trigger" %>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -24,10 +24,13 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <%= link_to 'Facebook connect', user_facebook_omniauth_authorize_path %>
+            <%= link_to 'Facebook connect', user_facebook_omniauth_authorize_path, class: "nav-link js-scroll-trigger" %>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+          <li>
+            <%= link_to 'LOGIN', new_user_session_path, class: "btn btn-primary" %>
           </li>
         </ul>
       </div>
@@ -101,7 +104,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>GB1</h4>
-            <p class="text-muted"></p>
+            <p class="text-muted">The Fundamentals of the gentle art </p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -115,7 +118,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>GB2</h4>
-            <p class="text-muted"></p>
+            <p class="text-muted">Advancing your Jiu-Jitsu game</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -129,7 +132,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>GB3</h4>
-            <p class="text-muted">Identity</p>
+            <p class="text-muted">Road To black Belt</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -157,7 +160,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>GBK</h4>
-            <p class="text-muted">Pour nos petits chérubins</p>
+            <p class="text-muted">GBK</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -171,7 +174,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>BarraFit</h4>
-            <p class="text-muted"></p>
+            <p class="text-muted">Le Jiu-Jitsu au service du fitness</p>
           </div>
         </div>
       </div>
@@ -271,7 +274,7 @@
         <div class="col-sm-4">
           <div class="team-member">
             <%= image_tag "JCT.jpg", :class => "mx-auto rounded-circle"   %>
-            <h4>Julien Cazié</h4>
+            <h4>Julien Cazier</h4>
             <p class="text-muted">Directeur General</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
@@ -318,7 +321,9 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
+
             <%= image_tag "WA.jpg", :class => "mx-auto rounded-circle"   %>
+
             <h4>Wilfried "Wilee" Arondel</h4>
             <p class="text-muted">Program Director</p>
             <ul class="list-inline social-buttons">
@@ -478,18 +483,18 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase"> GB1 : </h2>
+                <p class="item-intro text-muted">THE FUNDAMENTALS OF THE GENTLE ART</p>
+                <%= image_tag "GB1.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>Les techniques enseignées dans le programme GB 1 -les principes  fondamentaux du Jiu-jitsu- découlent du
+                  riche héritage de la première école Gracie à Rio de Janeiro, au Brésil, fondée en 1925. Ce programme tire sa
+                  force et son éfficacité des pratiques de formation spécialement développées dès 2005 quand le premier
+                  QG de la GB hors du Brésil était établi à Irvine en Californie</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Threads</li>
-                  <li>Category: Illustration</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  S'inscrire</button>
               </div>
             </div>
           </div>
@@ -512,18 +517,21 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase"> GB2 :</h2>
+                <p class="item-intro text-muted">ADVANCING YOUR JIU-JITSU GAME</p>
+                <%= image_tag "GB2.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>Le programme comprend l’autodéfense, le travail debout et les
+                    combats au sol.
+                    Ce ne sont là que quelques-unes des composantes-clés des méthodes d’enseignement qui ont inspiré
+                    Maître Carlos Gracie Jr.
+                    Ces pratiques, méthodes et approches originales sont toujours pertinentes aujourd’hui.
+                    Elles forment un pont pour notre école entre Maître Carlos Gracie Jr. (et ceux dont il a appris le JJ)
+                    et les instructeurs et étudiants d’aujourd’hui.</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Explore</li>
-                  <li>Category: Graphic Design</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  S'inscrire</button>
               </div>
             </div>
           </div>
@@ -546,18 +554,17 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase"> GB3 :</h2>
+                <p class="item-intro text-muted">ACHIEVING BLACK BELT EXCELLENCE</p>
+                <%= image_tag "GB3.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>
+                  À la conquête de la ceinture noire à travers des techniques poussées et exigeantes, enseignées
+                  dès la ceinture bleue.</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Finish</li>
-                  <li>Category: Identity</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  S'inscrire</button>
               </div>
             </div>
           </div>
@@ -580,18 +587,15 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">GB No Gi</h2>
+                <p class="item-intro text-muted">Without Kimono</p>
+                <%= image_tag "GBNG.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>Techniquement le JJB se pratique surtout en kimono (Gi) mais aussi sans (no-Gi). Peu de travail debout, l’éssentiel se pratique au sol avec le contrôle de l’adversaire puis la recherche de la soumission par clé articulaire ou étranglements. Nous vous permettrons de pratiquer du JJB no GI sous les regles de l'IBJJF et de l'ADCC</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Lines</li>
-                  <li>Category: Branding</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  S'inscrire</button>
               </div>
             </div>
           </div>
@@ -614,18 +618,19 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <h2 class="text-uppercase">GB Kids</h2>
+                <p class="item-intro text-muted">PROGRAMME GBK</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <p>La GRACIE BARRA est reconnue pour sa pédagogie adaptée aux enfants. Elle a créé le programme
+                GBK (K pour Kids), une combinaison de techniques de self-défense et de jiu jitsu destiné aux enfants
+                de 4 à 14 ans. Les enfants sont répartis selon leur âge et leur niveau (Tiny Champs, Little Champs,
+                Juniors, Competition Class) avec pour chacun, un cursus adapté. Les cours sont dispensés dans un
+                environnement sécurisé et encadrés par des professeurs certifiés.</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Southwest</li>
-                  <li>Category: Website Design</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Tarifs</button>
               </div>
             </div>
           </div>
@@ -648,18 +653,19 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <h2 class="text-uppercase">BarraFIT</h2>
+                <p class="item-intro text-muted">LE JIU-JITSU AU SERVICE DU FITNESS</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <p>Mettez-vous dans la meilleure forme de votre vie grâce au BarraFit, cours de remise en forme.
+                Le BarraFiT est un programme, accessible aux plus débutants, conçu avec les mêmes principes et valeurs ensei-
+                gnées au Jiu-Jitsu Brésilien de la Gracie Barra. Il est unique à Paris.
+                Que vos objectifs soient liés à la self-defense, à la condition physique ou à la familiarisation avec le Jiu-Jitsu,
+                venez vivre auprès de nos coaches certifiés une expérience stimulante et amusante en mode « team ».</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
-                  <li>Client: Window</li>
-                  <li>Category: Photography</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Tarifs</button>
               </div>
             </div>
           </div>
