@@ -1,43 +1,112 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
+    <h1>Edit Profile</h1>
+    <hr>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+      </div>
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <i class="fa fa-coffee"></i>
+          <%= render "devise/shared/error_messages", resource: resource %>
+        </div>
+        <h3>Personal info</h3>
+        
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">First name:</label>
+            <div class="col-lg-8">
+              <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control", placeholder: "First name" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Last name:</label>
+            <div class="col-lg-8">
+              <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "form-control", placeholder: "Last name" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Age:</label>
+            <div class="col-lg-8">
+              <%= f.text_field :age, autofocus: true, autocomplete: "age", class: "form-control", placeholder: "Age" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Weight:</label>
+            <div class="col-lg-8">
+              <%= f.text_field :weight, autofocus: true, autocomplete: "weight", class: "form-control", placeholder: "Weight" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Job:</label>
+            <div class="col-lg-8">
+               <%= f.text_field :profession, autofocus: true, autocomplete: "profession", class: "form-control", placeholder: "Profession" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Belt:</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="user_time_zone" name="user[belt]" class="form-control">
+                  <option value="Blanche">Blanche</option>
+                  <option value="Bleue">Bleue</option>
+                  <option value="Violette">Violette</option>
+                  <option value="Marron">Marron</option>
+                  <option value="Noire">Noire</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Phone:</label>
+            <div class="col-md-8">
+              <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control", placeholder: "Phone" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+              <%= f.password_field :password, autocomplete: "new-password",  class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Confirm password:</label>
+            <div class="col-md-8">
+              <%= f.password_field :password_confirmation, autocomplete: "new-password",  class: "form-control" %>   
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <%= f.submit "Save Changes", class: "btn btn-primary btn-block" %>
+              <span></span>
+              <%= link_to "Cancel", :back, class: "btn btn-default btn-block" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
+<hr>
