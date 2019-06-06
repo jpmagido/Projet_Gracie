@@ -1,21 +1,18 @@
 # frozen_string_literal: true
 
-class Users::RegistrationsController < Devise::RegistrationsController
+class Admins::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  def new
-    super
-    @user = User.new
-  end
+  # def new
+  #   super
+  # end
 
   # POST /resource
-  def create
-    super
-
-    User.create(users_params)
-  end
+  # def create
+  #   super
+  # end
 
   # GET /resource/edit
   # def edit
@@ -28,9 +25,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # DELETE /resource
-  def destroy
-    super
-  end
+  # def destroy
+  #   super
+  # end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
@@ -40,19 +37,29 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def cancel
   #   super
   # end
+  def edit_user
+      
+      @user = User.find(params[:id])
 
-  protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  def configure_sign_up_params
-    attrb = [:first_name,:last_name,:age, :phone, :profession, :nationality, :weight, :belt]
-    devise_parameter_sanitizer.permit :sign_up, keys: attrb
   end
 
-  # If you have extra params to permit, append them to the sanitizer.
-  def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
+  def update_user
+    
+     @user = User.find(params[:id])
+     @user.update(belt: params[:belt], subscription: params[:subscription], admin_rights: params[:admin_rights])
+
   end
+  # protected
+
+  # If you have extra params to permit, append them to the sanitizer.
+  # def configure_sign_up_params
+  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
+  # end
+
+  # If you have extra params to permit, append them to the sanitizer.
+  # def configure_account_update_params
+  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
+  # end
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
@@ -63,11 +70,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-    def users_params
+  private
+
+  def users_params
       params.require(:user).permit(:first_name,:last_name, :age, :phone, :profession, :nationality, :weight, :belt)
     end
-    def update_resource(resource, params)
-      resource.update_without_password(params)
-    end
-
 end
