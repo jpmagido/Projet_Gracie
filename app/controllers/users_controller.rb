@@ -24,7 +24,7 @@ class UsersController < ApplicationController
       password: params[:user][:password],
       age: params[:user][:age]
       )
-    redirect_to root_path
+    redirect_to pages_admin_interface_path
   end
 
   def edit
@@ -37,6 +37,7 @@ class UsersController < ApplicationController
       first_name: params[:user][:first_name],
       belt: params[:user][:belt]
       )
+    redirect_to pages_admin_interface_path
   end
 
   
