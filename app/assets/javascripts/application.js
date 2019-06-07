@@ -19,7 +19,7 @@
 //  <!-- Plugin JavaScript -->
 //= require jquery-easing/jquery.easing.min
 //  <!-- Custom scripts for this template -->
-//= require agency.min
+
 //
 //
 //
