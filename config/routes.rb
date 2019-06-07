@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  
+  get 'pages/Historique'
+  get 'pages/CodeC'
+  get 'pages/planning'
   get 'pages/static_lp'
   get 'pages/secret_page'
   get 'pages/admin_interface'

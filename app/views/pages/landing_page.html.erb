@@ -15,22 +15,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            <%= link_to 'Nos Valeurs', root_path(anchor: 'services'), class: "nav-link js-scroll-trigger" %>
           </li>
           <li class="nav-item">
-          <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "nav-link js-scroll-trigger" %>
+            <%= link_to 'Nos cours', root_path(anchor: 'portfolio'), class: "nav-link js-scroll-trigger" %>
+          </li>
+          <li class="nav-item ">
+            <%= link_to 'Historique', root_path(anchor: 'about'), class: "nav-link js-scroll-trigger" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            <%= link_to 'Contact', root_path(anchor: 'contact'), class: "nav-link js-scroll-trigger" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Facebook connect', user_facebook_omniauth_authorize_path, class: "nav-link js-scroll-trigger" %>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <%= link_to 'Se Connecter', new_user_session_path, class: "nav-link" %>
           </li>
         </ul>
       </div>
@@ -270,7 +267,7 @@
                 </div>
                 <div class="timeline-body">
                   <p class="text-muted">Julien découvre le Jiu Jiutsu au début des années 2000.
-                  Sous l’impulsion de la Gracie Barra, Julien part à Rio avec Jonatas pour s’entrainer. Il combat aux World IBJJF en ceinture bleue où il prend le bronze pour sa première participation. En 2009, Julien reçoit sa ceinture noire des mains de Master Carlos Gracie Jr après son podium aux World IBJJF. Cela reste aujourd’hui l’un de ses plus grands souvenirs. Les années passant et les ceintures avançant, Julien décide de prendre en main le développement de la Gracie Barra Paris. Sur le terreau de la Gracie Barra IDF créé par Jonatas Eliaquim, il relance la Gracie Barra Paris. L’objectif étant d’en faire une académie pour toutes et tous, quelque soit le niveau de pratique, quel que soit l’âge, le niveau social, l’origine ethnique et la religion <a href="">Lire la suite</a></p>
+                  Sous l’impulsion de la Gracie Barra, Julien part à Rio avec Jonatas pour s’entrainer. Les années passant et les ceintures avançant, Julien décide de prendre en main le développement de la Gracie Barra Paris. Sur le terreau de la Gracie Barra IDF créé par Jonatas Eliaquim, il relance la Gracie Barra Paris. L’objectif étant d’en faire une académie pour toutes et tous, quelque soit le niveau de pratique, quel que soit l’âge, le niveau social, l’origine ethnique et la religion <a href="">Lire la suite</a></p>
                 </div>
               </div>
             </li>
@@ -284,7 +281,13 @@
                   <h4 class="subheading"></h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">1er Aout 2017, Reception et installation des tous nouveaux tatamis au GB Paris HQ</p>
+                  <p class="text-muted">La GRACIE BARRA PARIS est un rêve qui se réalise. Ouverte depuis 2005, notre école
+                  est la principale référence de la Gracie Barra ici en France.
+                  Nous sommes fiers de compter parmi nous plus de 400 élèves de tous âges et de toutes
+                  origines qui participent à la construction d’une véritable fraternité marchant sur le long
+                  chemin de la maîtrise de soi enseignée par le Jiu-Jitsu Brésilien.
+                  Notre site est une extension virtuelle de notre école. Ici vous trouverez tous les renseignements
+                  sur nos programmes, nos classes, sur l’art de Jiu-Jitsu Brésilien, et sur nous.<a href="">Lire la suite</a></p>
                 </div>
               </div>
             </li>
