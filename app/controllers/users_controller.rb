@@ -27,21 +27,19 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def update
-    
-    @user_to_edit = User.last
-    @user_to_edit.update(
-      first_name: params[:user][:first_name],
-      belt: params[:user][:belt],
-      profession: params[:user][:profession],
-      age: params[:user][:age]
-      )
-
-  end
-
   def edit
     @user_to_edit = User.last
   end
+
+  def update
+    @user_to_edit = User.last
+    @user_to_edit.update(
+      first_name: params[:user][:first_name],
+      belt: params[:user][:belt]
+      )
+  end
+
+  
 
  
 

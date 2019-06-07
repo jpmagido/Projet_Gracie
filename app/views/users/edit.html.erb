@@ -1,2 +1,20 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="div-admin-header">
+	<div>
+		<h1>ADMINISTRATEUR </h1>
+ 		<h2>Gestion des Utilisateurs</h2>
+	</div>
+	<div>
+		<%= form_for @user_to_edit do |f| %>
+			<div class="form-group">
+			<label>Prénom</label><br>
+		  <%= f.text_field :first_name %><br><br>
+
+		  <label>Belt</label><br>
+		  <%= f.text_field :belt %><br><br>
+
+		  <%= f.submit "Modifier" %>
+
+		  </div>
+		<% end %>
+	</div>
+</div>

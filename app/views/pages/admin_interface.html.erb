@@ -9,6 +9,7 @@
 	<%= link_to "Sign out", destroy_admin_session_path, method: :delete, class:"btn btn-warning btn-lg js-scroll-trigger" %>
 	<%= link_to "Creer un Administrateur", new_admin_registration_path, class: "btn btn-danger btn-lg js-scroll-trigger"%>
 	<%= link_to "Creer un Utilisateur", new_user_path, class: "btn btn-danger btn-lg js-scroll-trigger"%>
+	<%= link_to "Modifier un Utilisateur", edit_user_path(@user_to_edit), class: "btn btn-danger btn-lg js-scroll-trigger"%>
 </div>
 </div>
 

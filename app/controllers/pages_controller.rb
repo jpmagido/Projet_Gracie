@@ -15,5 +15,6 @@ class PagesController < ApplicationController
   		puts "$$" * 100
   		puts @user_to_pay
   		puts "$$" * 100
+  		@user_to_edit = User.last.id
   end
 end
