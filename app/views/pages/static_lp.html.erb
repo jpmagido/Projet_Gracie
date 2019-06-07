@@ -40,8 +40,11 @@
 										          <div class="card-body">
 										            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
 										            <h6 class="card-price text-center">75€</h6>
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(1).price %>" />
 										            
-										            <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
 										          </div>
 										        </div>
 										      </div>
@@ -52,7 +55,11 @@
 										            <h5 class="card-title text-muted text-uppercase text-center">Quarterly</h5>
 										            <h6 class="card-price text-center">210€<span class="period">/3 month</span></h6>
 										            
-										            <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(2).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
 										          </div>
 										        </div>
 										      </div>
@@ -63,8 +70,11 @@
 										            <h5 class="card-title text-muted text-uppercase text-center">Annualy</h5>
 										            <h6 class="card-price text-center">550€<span class="period">/year</span></h6>
 										           
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(3).price %>" />
 										            
-										            <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
 										          </div>
 										        </div>
 										      </div>
