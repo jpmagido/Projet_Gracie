@@ -4,7 +4,10 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <%= image_tag "gb-logo.png", :class => "img-fluid", :style => "width:15%; height:15%;"%>
+         Gracie Barra Paris
+      </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -15,7 +18,7 @@
             <a class="nav-link js-scroll-trigger" href="#services">Services</a>
           </li>
           <li class="nav-item">
-<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "nav-link js-scroll-trigger" %>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -24,7 +27,7 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+            <%= link_to 'Facebook connect', user_facebook_omniauth_authorize_path, class: "nav-link js-scroll-trigger" %>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -36,48 +39,83 @@
 
   <!-- Header -->
   <header class="masthead">
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Welcome To Our Studio!</div>
-        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+    <div class="carousel-inner">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-item active">
+          <img style="filter:grayscale(30%)"src="https://zupimages.net/up/19/23/nk23.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+          <h1><mark>Jiu-Jitsu</mark></h1>
+          <h1><mark>For</mark></h1>
+          <h1><mark>Everyone</mark></h1>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Rejoignez-nous</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img style="filter: grayscale(30%) " src="https://zupimages.net/up/19/23/i9zn.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1><mark>Jiu-Jitsu</mark></h1>
+            <h1><mark>For</mark></h1>
+            <h1><mark>Everyone</mark></h1>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Rejoignez-nous</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img style="filter:contrast(100%)" src="https://zupimages.net/up/19/23/z1ep.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1><mark>Jiu-Jitsu</mark></h1>
+            <h1><mark>For</mark></h1>
+            <h1><mark>Everyone</mark></h1>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Rejoignez-nous</a>
+          </div>
+        </div>
       </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-  </header>
+
+
+    </header>
+
+
 
   <!-- Services -->
   <section class="page-section" id="services">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Services</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Nos valeurs </h2>
+          <h3 class="section-subheading text-muted">"Organisé comme une équipe, se battant comme une famille"</h3>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-users fa-stack-2x text-primary"></i>
           </span>
-          <h4 class="service-heading">E-Commerce</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <h4 class="service-heading">Fraternité</h4>
+          <p class="text-muted">Etre capable de s'engager dans un objectif commun au-dela des besoins personnels.<br>Il faut etre tolérant et traiter et traiter les gens comme étant une extention de sa propre famille</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
           </span>
-          <h4 class="service-heading">Responsive Design</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <h4 class="service-heading">Intégrité</h4>
+          <p class="text-muted">Etra capable de penser à long terme et tracé le chemin pour les generations futures, sans oublier de continuellement honorer nos traditions et nos prédecesseurs</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+            <i class="fab fa-pagelines fa-stack-2x text-primary"></i>
           </span>
-          <h4 class="service-heading">Web Security</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <h4 class="service-heading">Developpement</h4>
+          <p class="text-muted">Pouvoir transmettre a autrui les avantages et bénefices du Jiu Jitsu Brésilien. Etre capable de promouvoir et étendre notre art dans le monde entier</p>
         </div>
       </div>
     </div>
@@ -88,8 +126,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Portfolio</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Venez t'entraîner avec nous</h2>
+          <h3 class="section-subheading text-muted">Notre site est une extension virtuelle de notre école. Ici vous trouverez tous les renseignements sur nos programmes:</h3>
         </div>
       </div>
       <div class="row">
@@ -97,84 +135,84 @@
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+                <i class="fas fa-plus"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+            <%= image_tag "gb1-5.png", :class => "img-fluid"   %>
           </a>
           <div class="portfolio-caption">
-            <h4>Threads</h4>
-            <p class="text-muted">Illustration</p>
+            <h4>GB1</h4>
+            <p class="text-muted">Les principes fondamentaux</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+                <i class="fas fa-plus"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            <%= image_tag "gb2-3.png", :class => "img-fluid"   %>
           </a>
           <div class="portfolio-caption">
-            <h4>Explore</h4>
-            <p class="text-muted">Graphic Design</p>
+            <h4>GB2</h4>
+            <p class="text-muted">Core Développement</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+                <i class="fas fa-plus"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+            <%= image_tag "GB3.png", :class => "img-fluid"   %>
           </a>
           <div class="portfolio-caption">
-            <h4>Finish</h4>
-            <p class="text-muted">Identity</p>
+            <h4>GB3</h4>
+            <p class="text-muted">Atteindre l'excellence </p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+                <i class="fas fa-plus"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+            <%= image_tag "nogi.png", :class => "img-fluid"   %>
           </a>
           <div class="portfolio-caption">
-            <h4>Lines</h4>
-            <p class="text-muted">Branding</p>
+            <h4>No-Gi</h4>
+            <p class="text-muted">Grappling IBJJF / ADCC</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+                <i class="fas fa-plus"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+            <%= image_tag "gbkids.png", :class => "img-fluid"   %>
           </a>
           <div class="portfolio-caption">
-            <h4>Southwest</h4>
-            <p class="text-muted">Website Design</p>
+            <h4>Programme GBK</h4>
+            <p class="text-muted">Jiu jitsu pour enfants</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+                <i class="fas fa-plus"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+            <%= image_tag "barrafit-1.png", :class => "img-fluid"   %>
           </a>
           <div class="portfolio-caption">
-            <h4>Window</h4>
-            <p class="text-muted">Photography</p>
+            <h4>BarraFit</h4>
+            <p class="text-muted">Fitness pour Jiu-jitsu </p>
           </div>
         </div>
       </div>
@@ -186,8 +224,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">About</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Histoire</h2>
+          <h3 class="section-subheading text-muted">Ne pensez qu'au meilleur, ne travaillez que pour le meilleur et attendez-vous toujours au meilleur.</h3>
         </div>
       </div>
       <div class="row">
@@ -195,65 +233,64 @@
           <ul class="timeline">
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                <%= image_tag "CGSNR.jpg", :class => "rounded-circle img-fluid"   %>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4>2009-2011</h4>
-                  <h4 class="subheading">Our Humble Beginnings</h4>
+                  <h4>Carlos Gracie</h4>
+                  <h4 class="subheading">Le créateur</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Né en 1902 et mort en 1994, Carlos Gracie SNR débute le Jiu Jitsu à 15 ans en compagnie de Mitsuo Maeda, un grand maitre de Jiu Jitsu expatrié au Brésil depuis 1915.  le Jiu-Jitsu devient non seulement une méthode pour se battre, mais aussi...<a href="">Lire la suite</a></p>
                 </div>
               </div>
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                <%= image_tag "CGJR.jpg", :class => "rounded-circle img-fluid"   %>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4>March 2011</h4>
-                  <h4 class="subheading">An Agency is Born</h4>
+                  <h4>Carlos Gracie Jr</h4>
+                  <h4 class="subheading">Le Philosophe </h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Né à Rio en 1956 et fils de Carlos Gracie Sr, qui est le fondateur de GRACIE Jiu Jitsu. Carlos Jr a grandi au sein d'une grande famille de combattant. Il a su observer, apprendre et s'inspirer de ces ainés : Carlos Gracie SR, Helios et Rolls. Durant toute sa...<a href="">Lire la suite</a></p>
                 </div>
               </div>
             </li>
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                <%= image_tag "JC.jpg", :class => "rounded-circle img-fluid"   %>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4>December 2012</h4>
-                  <h4 class="subheading">Transition to Full Service</h4>
+                  <h4>Julien Cazier</h4>
+                  <h4 class="subheading">Ceinture Noire 4éme degrée</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Julien découvre le Jiu Jiutsu au début des années 2000.
+                  Sous l’impulsion de la Gracie Barra, Julien part à Rio avec Jonatas pour s’entrainer. Il combat aux World IBJJF en ceinture bleue où il prend le bronze pour sa première participation. En 2009, Julien... <a href="">Lire la suite</a></p>
                 </div>
               </div>
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                <%= image_tag "gbhq2.png", :class => "img-fluid rounded-circle"   %>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4>July 2014</h4>
-                  <h4 class="subheading">Phase Two Expansion</h4>
+                  <h4>GB Paris HQ</h4>
+                  <h4 class="subheading"></h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Après la campagne de crowdfunding, le rêve de créer notre propre club est devenu réalité. Le premier août 2017, nous avons installé les tatamis dans l'académie avec l'aide des membres de notre équipe. Avec la joie d'un travail fini, nous avons inaguré le...<a href="">Lire la suite</a></p>
                 </div>
               </div>
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <h4>Be Part
-                  <br>Of Our
-                  <br>Story!</h4>
+                <%= image_tag "gb-logo.png", :class => "img-fluid rounded-circle"   %>
               </div>
             </li>
           </ul>
@@ -267,30 +304,30 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">L'équipe GB Paris</h2>
+          <h3 class="section-subheading text-muted">Le talent gagne les matchs, mais le travail d'équipe et l'intelligence gagnent les championnats.</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
+            <%= image_tag "JC2.jpg", :class => "mx-auto rounded-circle"   %>
+            <h4>Julien Cazier</h4>
+            <p class="text-muted">School Owner</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://twitter.com/juliencazier?lang=fr">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://fr-fr.facebook.com/groups/graciebarraparis75/">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
+                <a href="https://www.instagram.com/julcafetao/p/BDV6cpnDoGe/">
+                  <i class="fab fa-instagram"></i>
                 </a>
               </li>
             </ul>
@@ -298,9 +335,9 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
+            <%= image_tag "wilee-profile.png", :class => "mx-auto rounded-circle"   %>
+            <h4>Wilfried "Wilee" Arondel</h4>
+            <p class="text-muted">Program Director</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -313,8 +350,8 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
+                <a href="https://www.instagram.com/lucasblack.bjj/?hl=fr">
+                  <i class="fab fa-instagram"></i>
                 </a>
               </li>
             </ul>
@@ -322,23 +359,23 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
+            <%= image_tag "lucas.png", :class => "mx-auto rounded-circle"   %>
+            <h4>Lucas "black" Ramos</h4>
+            <p class="text-muted">Professeur et Compétiteur</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://twitter.com/wileephotograph?lang=fr">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://fr-fr.facebook.com/wileephotograph">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
+                <a href="https://www.instagram.com/explore/locations/375146641/gracie-barra-paris/?hl=en">
+                  <i class="fab fa-instagram"></i>
                 </a>
               </li>
             </ul>
@@ -352,6 +389,13 @@
       </div>
     </div>
   </section>
+
+  <!--Google map-->
+  <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.527367325746!2d2.3246817155705495!3d48.88628590669643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdeda04472d%3A0x340a79b1825d3a82!2sGracie+Barra+Paris!5e0!3m2!1ses!2sfr!4v1559811236792!5m2!1ses!2sfr" frameborder="0"
+      style="border:0" allowfullscreen></iframe>
+  </div>
+  <!--Google Maps-->
 
   <!-- Clients -->
   <section class="py-5">
@@ -386,8 +430,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Contact Us</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Reserver mon cours d´essai</h2>
+          <h3 class="section-subheading text-muted">Remplissez le formulaire avec toutes vos donnéees et le message que vous souhaitez nous addresser
         </div>
       </div>
       <div class="row">
@@ -396,28 +440,28 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                  <input class="form-control" id="name" type="text" placeholder="Votre Nom *" required="required" data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                  <input class="form-control" id="email" type="email" placeholder="Votre Email *" required="required" data-validation-required-message="Please enter your email address.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                  <input class="form-control" id="phone" type="tel" placeholder="Votre Téléphone *" required="required" data-validation-required-message="Please enter your phone number.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <textarea class="form-control" id="message" placeholder="Votre Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
-                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Envoyer</button>
               </div>
             </div>
           </form>
@@ -431,7 +475,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Your Website 2019</span>
+          <span class="copyright">Copyright &copy; Gracie Barra Paris 2019</span>
         </div>
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
@@ -482,18 +526,18 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase"> GB1 : </h2>
+                <p class="item-intro text-muted">Les principes fondamentaux</p>
+                <%= image_tag "gb1-5.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>Les techniques enseignées dans le programme GB 1 -les principes  fondamentaux du Jiu-jitsu- découlent du
+                  riche héritage de la première école Gracie à Rio de Janeiro, au Brésil, fondée en 1925. Ce programme tire sa
+                  force et son éfficacité des pratiques de formation spécialement développées dès 2005 quand le premier
+                  QG de la GB hors du Brésil était établi à Irvine en Californie</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Threads</li>
-                  <li>Category: Illustration</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  S'inscrire</button>
               </div>
             </div>
           </div>
@@ -516,18 +560,21 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase"> GB2 :</h2>
+                <p class="item-intro text-muted">Core Développement</p>
+                <%= image_tag "gb2-3.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>Le programme comprend l’autodéfense, le travail debout et les
+                    combats au sol.
+                    Ce ne sont là que quelques-unes des composantes-clés des méthodes d’enseignement qui ont inspiré
+                    Maître Carlos Gracie Jr.
+                    Ces pratiques, méthodes et approches originales sont toujours pertinentes aujourd’hui.
+                    Elles forment un pont pour notre école entre Maître Carlos Gracie Jr. (et ceux dont il a appris le JJ)
+                    et les instructeurs et étudiants d’aujourd’hui.</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Explore</li>
-                  <li>Category: Graphic Design</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  S'inscrire</button>
               </div>
             </div>
           </div>
@@ -550,18 +597,17 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase"> GB3 :</h2>
+                <p class="item-intro text-muted">Atteindre l'excellence</p>
+                <%= image_tag "GB3.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>
+                  À la conquête de la ceinture noire à travers des techniques poussées et exigeantes, enseignées
+                  dès la ceinture bleue.</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Finish</li>
-                  <li>Category: Identity</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  S'inscrire</button>
               </div>
             </div>
           </div>
@@ -584,18 +630,15 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">No-Gi</h2>
+                <p class="item-intro text-muted">Grappling</p>
+                <%= image_tag "nogi.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>Techniquement le JJB se pratique surtout en kimono (Gi) mais aussi sans (no-Gi). Peu de travail debout, l’éssentiel se pratique au sol avec le contrôle de l’adversaire puis la recherche de la soumission par clé articulaire ou étranglements. Nous vous permettrons de pratiquer du JJB no GI sous les regles de l'IBJJF et de l'ADCC</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Lines</li>
-                  <li>Category: Branding</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  S'inscrire</button>
               </div>
             </div>
           </div>
@@ -618,18 +661,19 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">GB Kids</h2>
+                <p class="item-intro text-muted">PROGRAMME GBK</p>
+                <%= image_tag "gbkids.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>La GRACIE BARRA est reconnue pour sa pédagogie adaptée aux enfants. Elle a créé le programme
+                GBK (K pour Kids), une combinaison de techniques de self-défense et de jiu jitsu destiné aux enfants
+                de 4 à 14 ans. Les enfants sont répartis selon leur âge et leur niveau (Tiny Champs, Little Champs,
+                Juniors, Competition Class) avec pour chacun, un cursus adapté. Les cours sont dispensés dans un
+                environnement sécurisé et encadrés par des professeurs certifiés.</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Southwest</li>
-                  <li>Category: Website Design</li>
+                  <li>Date: Juin 2019</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Tarifs</button>
               </div>
             </div>
           </div>
@@ -652,18 +696,19 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">BarraFIT</h2>
+                <p class="item-intro text-muted">LE JIU-JITSU AU SERVICE DU FITNESS</p>
+                <%= image_tag "barrafit-1.png", :class => "img-fluid d-block mx-auto"   %>
+                <p>Mettez-vous dans la meilleure forme de votre vie grâce au BarraFit, cours de remise en forme.
+                Le BarraFiT est un programme, accessible aux plus débutants, conçu avec les mêmes principes et valeurs ensei-
+                gnées au Jiu-Jitsu Brésilien de la Gracie Barra. Il est unique à Paris.
+                Que vos objectifs soient liés à la self-defense, à la condition physique ou à la familiarisation avec le Jiu-Jitsu,
+                venez vivre auprès de nos coaches certifiés une expérience stimulante et amusante en mode « team ».</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
-                  <li>Client: Window</li>
-                  <li>Category: Photography</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Tarifs</button>
               </div>
             </div>
           </div>

@@ -13,8 +13,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    @user = User.create(users_params)
 
+    User.create(users_params)
   end
 
   # GET /resource/edit
@@ -41,18 +41,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
-  private
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
+  def configure_sign_up_params
+    attrb = [:first_name,:last_name,:age, :phone, :profession, :nationality, :weight, :belt]
+    devise_parameter_sanitizer.permit :sign_up, keys: attrb
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
+  def configure_account_update_params
+    devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
+  end
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
@@ -64,7 +64,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
     def users_params
-      params.require(:user).permit(:first_name,:last_name,:age, :phone, :profession, :nationality, :weight, :belt)
+      params.require(:user).permit(:first_name,:last_name, :age, :phone, :profession, :nationality, :weight, :belt)
+    end
+    def update_resource(resource, params)
+      resource.update_without_password(params)
     end
 
 end

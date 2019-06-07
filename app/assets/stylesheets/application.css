@@ -15,3 +15,172 @@
  *= require bootstrap/css/bootstrap.min
  *= require agency.min
  */
+
+
+ /* GLOBAL */
+
+ html, body {
+ 	height: 100%;
+ }
+
+ .form-gap {
+    padding-top: 70px;
+}
+
+/*  STRIPE START*/
+.container-charges{
+	display: flex;
+	
+	height: 300px;
+	align-items: center;
+
+}
+
+.container-1-charges{
+	margin: auto;
+	text-align: center;
+	border: solid;
+	border-width: 1px;
+	padding: 15px;
+}
+/*  STRIPE END*/
+
+/*   ADMIN DASHBOARD */
+
+.div-admin-header{
+
+	display: flex;
+	justify-content: space-around;
+	margin: 20px 5px 0 5px;
+}
+.div-admin-main-stats{
+	display: flex;
+	justify-content: space-between;
+}
+
+.div-admin-stats-data{
+	margin-left: 20px;
+}
+.div-admin-stats{
+	border: solid;
+	border-width: 1px;
+	width: 50%;
+	
+	margin: 20px;
+	border-radius: 3px;
+}
+.div-admin-stats-1{
+	width: 250px;
+	margin: 10px;
+}
+.div-admin-stats-bis{
+	margin: 20px 50px 20px 20px;
+	border: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	padding: 20px;
+}
+
+#form-control-1{
+	margin-top: 5px;
+}
+
+.div-admin-name{
+	font-weight: bold;
+	margin: 15px;
+}
+
+.div-main{
+	border-top: solid;
+	border-bottom: solid;
+	border-left: solid;
+	border-width: 1px;
+	margin: 20px 5px 20px 5px;
+}
+.div-admin-table{
+	border-bottom: solid;
+	border-width: 1px;
+	display: flex;
+	justify-content: row;
+	font-weight: bold;
+	font-size: large;
+
+}
+.div-admin-table-2{
+	display: flex;
+	justify-content: row;
+}
+
+.div-admin-table-1{
+	
+	border-right: solid;
+	border-width: 1px;
+	width: 150px;
+	min-width: 60px;
+	padding: 1px 3px 1px 10px;
+	
+}
+.div-admin-table-1-long{
+	border-right: solid;
+	border-width: 1px;
+	width: 250px;
+	min-width: 60px;
+	padding: 1px 3px 1px 10px;
+	
+}
+.div-admin-table-1-bis{
+	
+	border-right: solid;
+	border-width: 1px;
+	width: 35px;
+	min-width: 30px;
+	padding: 1px 3px 1px 10px;
+}
+
+.div-admin-table-bis-2{
+	border-right: solid;
+	border-width: 1px;
+	width: 70px;
+	min-width: 60px;
+	padding: 1px 3px 1px 5px;
+	font-weight: bold;
+}
+.div-admin-table-bis-3{
+	border-right: solid;
+	border-width: 1px;
+	width: 95px;
+	min-width: 60px;
+	padding: 1px 3px 1px 5px;
+}
+
+.div-admin-table-bis-4{
+	border-right: solid;
+	border-width: 1px;
+	width: 105px;
+	min-width: 60px;
+	padding: 1px 3px 1px 5px;
+}
+
+.div-searsh-bar{
+	width: 30%;
+	margin: 15px;
+}
+
+
+/*   ADMIN DASHBOARD */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
