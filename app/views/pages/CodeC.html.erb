@@ -1,5 +1,6 @@
-<%= render "layouts/navbar" %>
 
+<%= render "layouts/navbar" %>
+<body id="page-static">
 <div class="container">
 	<div class="row">
 		<h1 id="title-codec">Code de conduite</h1>
@@ -7,14 +8,14 @@
         <div role="tabpanel">
             <div class="col-sm-3">
                 <ul class="nav nav-pills brand-pills nav-stacked" role="tablist">
-                    <li role="presentation" class="brand-nav"><a href="#tab1" aria-controls="tab1" role="tab" style="width: 150px" data-toggle="tab" >Fraternité</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab2" aria-controls="tab2" role="tab" style="width: 180px" data-toggle="tab">Coopération</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab3" aria-controls="tab3" role="tab" style="width: 180px" data-toggle="tab">Discipline</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Respect</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">Perfectionnement et developpement permanent</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab6" aria-controls="tab6" role="tab" style="width: 180px" data-toggle="tab">Leadership</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab7" aria-controls="tab7" role="tab" style="width: 190px" data-toggle="tab">Inspiration</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab">Plaisir</a></li>
+                    <li role="presentation" class="brand-nav"><a href="#tab1" aria-controls="tab1" role="tab" style="width: 150px;color: black;" data-toggle="tab" >Fraternité</a></li>
+                    <li role="presentation" class="brand-nav"><a href="#tab2" aria-controls="tab2" role="tab" style="width: 180px;color: black;" data-toggle="tab">Coopération</a></li>
+                    <li role="presentation" class="brand-nav"><a href="#tab3" aria-controls="tab3" role="tab" style="width: 180px;color: black;" data-toggle="tab">Discipline</a></li>
+                    <li role="presentation" class="brand-nav"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab" style="color: black;">Respect</a></li>
+                    <li role="presentation" class="brand-nav"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab" style="color: black;">Perfectionnement et developpement permanent</a></li>
+                    <li role="presentation" class="brand-nav"><a href="#tab6" aria-controls="tab6" role="tab" style="width: 180px;color: black;" data-toggle="tab">Leadership</a></li>
+                    <li role="presentation" class="brand-nav"><a href="#tab7" aria-controls="tab7" role="tab" style="width: 190px;color: black;" data-toggle="tab">Inspiration</a></li>
+                    <li role="presentation" class="brand-nav"><a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab"style="color: black;">Plaisir</a></li>
                 </ul>
             </div>
             <div class="col-sm-9">
@@ -65,4 +66,5 @@
         </div>
     </div>
 </div>
-
+</body>
+<%= render "layouts/footer" %>

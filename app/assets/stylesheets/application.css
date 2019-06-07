@@ -207,7 +207,22 @@
 	margin-top: 10%;
 }
 
+/* Static page */
 
+#footer-static {
+background-color: #2f3542;
+background-size: cover;
+font-size: 18px;
+font-family: 'Roboto', sans-serif;
+}
+
+.NavStat {
+	background-color: #2f3542;
+	color: black;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+
+}
 
 
 
