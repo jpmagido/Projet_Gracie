@@ -52,6 +52,23 @@ def create_formula
 	Formula.create(name: "GB3-1", price: 90)
 	Formula.create(name: "GB3-2", price: 250)
 	Formula.create(name: "GB3-3", price: 700)
+	Formula.create(name: "BBC-1", price: 100)
+	Formula.create(name: "BBC-2", price: 300)
+	Formula.create(name: "BBC-3", price: 800)
+	Formula.create(name: "MT-1", price: 75)
+	Formula.create(name: "MT-2", price: 200)
+	Formula.create(name: "MT-3", price: 450)
+	Formula.create(name: "MMA-1", price: 100)
+	Formula.create(name: "MMA-2", price: 250)
+	Formula.create(name: "MMA-3", price: 700)
+	Formula.create(name: "BF-1", price: 50)
+	Formula.create(name: "BF-2", price: 150)
+	Formula.create(name: "BF-3", price: 250)
+	Formula.create(name: "YG-2", price: 50)
+	Formula.create(name: "YG-1", price: 15)
+	Formula.create(name: "PP-2", price: 50)
+	Formula.create(name: "PP-1", price: 15)
+
 	puts "Forfaits GB 1, 2 et 3 crées"
 end
 
