@@ -7,13 +7,13 @@ class ChargesController < ApplicationController
 
 	def create
 	  # Amount in cents
-	  @amount = params[:price] 
+	  @amount = params[:price].to_i 
 	  
 	  Contract.create(user_id: current_user,formula_id: Formula.first)
 
-		 begin
+		 
 		  customer = Stripe::Customer.create({
-		    email: current_user.email,
+		    email: params[:stripeEmail],
 		    source: params[:stripeToken],
 		  })
 
@@ -28,7 +28,7 @@ class ChargesController < ApplicationController
 		  flash[:error] = e.message
 		  flash[:price] = @amount
 		  redirect_to new_charge_path
-		end
+		
 	end
 		
 end
