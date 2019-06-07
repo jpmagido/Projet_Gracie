@@ -28,11 +28,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user_to_edit = User.last
+    @user_to_edit = User.find(params[:id])
   end
 
   def update
-    @user_to_edit = User.last
+    @user_to_edit = User.find(params[:id])
     @user_to_edit.update(
       first_name: params[:user][:first_name],
       belt: params[:user][:belt]
