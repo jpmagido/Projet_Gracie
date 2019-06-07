@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   		@users = User.all
   		@users_number = User.all.count
   		@users_no_paid = User.where("subscription > '0'").count
-  		@user_to_pay = User.find(1).subscription
+  		#@user_to_pay = User.find(81).subscription
   		puts "$$" * 100
   		puts @user_to_pay
   		puts "$$" * 100
