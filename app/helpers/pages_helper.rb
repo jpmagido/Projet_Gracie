@@ -20,5 +20,8 @@ module PagesHelper
 		end
 	end
 
-	
+	def update_user
+		#@user_to_pay = User.find(81)
+		@user_to_pay.update(subscription: 100)
+	end
 end
