@@ -2,7 +2,7 @@
 
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg  fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <%= image_tag "gb-logo.png", :class => "img-fluid", :style => "width:15%; height:15%;"%>
@@ -28,6 +28,9 @@
           </li>
           <li class="nav-item">
             <%= link_to 'Se Connecter', new_user_session_path, class: "nav-link" %>
+          </li>
+          <li>
+            <%= link_to 'LOGIN', new_user_session_path, class: "btn btn-primary" %>
           </li>
         </ul>
       </div>
@@ -139,7 +142,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>GB1</h4>
-            <p class="text-muted"></p>
+            <p class="text-muted">The Fundamentals of the gentle art </p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -153,7 +156,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>GB2</h4>
-            <p class="text-muted"></p>
+            <p class="text-muted">Advancing your Jiu-Jitsu game</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -167,7 +170,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>GB3</h4>
-            <p class="text-muted">Identity</p>
+            <p class="text-muted">Road To black Belt</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -195,7 +198,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>GBK</h4>
-            <p class="text-muted">Pour nos petits chérubins</p>
+            <p class="text-muted">GBK</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -209,7 +212,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>BarraFit</h4>
-            <p class="text-muted"></p>
+            <p class="text-muted">Le Jiu-Jitsu au service du fitness</p>
           </div>
         </div>
       </div>
@@ -362,7 +365,9 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
+
             <%= image_tag "WA.jpg", :class => "mx-auto rounded-circle"   %>
+
             <h4>Wilfried "Wilee" Arondel</h4>
             <p class="text-muted">Program Director</p>
             <ul class="list-inline social-buttons">
