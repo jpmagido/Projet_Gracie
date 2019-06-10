@@ -1,10 +1,17 @@
 class PagesController < ApplicationController
 	before_action :authenticate_admin!, only: [:admin_interface]
+  before_action :authenticate_user!, only: [:secret_page]
   
   def static_lp
+    
   end
 
   def landing_page
+
+  end
+
+  def secret_page
+    
   end
 
   def home_page
