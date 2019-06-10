@@ -171,33 +171,11 @@
 
 /* Code de conduite (CodeC) PAGES*/
 #title-codec {
-    margin-left: 37%;
+    margin-left: 33%;	
     margin-bottom: 60px;
     margin-top: 5%;
 }
 
-@media (min-width: 768px) {
-
-    .brand-pills > li > a {
-        border-top-right-radius: 0px;
-    	border-bottom-right-radius: 0px;
-    }
-    
-    li.brand-nav.active a:after{
-    	content: " ";
-    	display: block;
-    	width: 0;
-    	height: 0;
-    	border-top: 20px solid transparent;
-    	border-bottom: 20px solid transparent;
-    	border-left: 9px solid #428bca;
-    	position: fixed;
-    	top: 50%;
-    	margin-top: -20px;
-    	left: 100%;
-    	z-index: 2;
-    }
-}
 
 .codec-content {
 	
@@ -207,22 +185,12 @@
 	margin-top: 10%;
 }
 
-/* Static page */
 
-#footer-static {
-background-color: #2f3542;
-background-size: cover;
-font-size: 18px;
-font-family: 'Roboto', sans-serif;
-}
 
-.NavStat {
-	background-color: #2f3542;
-	color: black;
-	font-size: 18px;
-	font-family: 'Roboto', sans-serif;
 
-}
+
+
+
 
 
 
