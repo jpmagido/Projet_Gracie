@@ -14,6 +14,9 @@ class PagesController < ApplicationController
     
   end
 
+  def home_page
+    
+  end
   def admin_interface
   		@users = User.all
   		@users_number = User.all.count
