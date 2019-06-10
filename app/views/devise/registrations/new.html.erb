@@ -3,13 +3,13 @@
 
 <div class="card">
 <article class="card-body mx-auto" style="max-width: 400px;">
-  <h4 class="card-title mt-3 text-center">Create Account</h4>
-  <p class="text-center">Get started with your free account</p>
-  <p class="text-center">Have an account? <%= render "devise/shared/links" %></p>
+  <h4 class="card-title mt-3 text-center">Créer un Compte</h4>
+  <p class="text-center">Inscrivez-vous gratuitement</p>
+  <p class="text-center">Déjà inscrit ? <%= render "devise/shared/links" %></p>
     
 
   <p class="divider-text text-center">
-        <span>OR</span>
+        <span>OU</span>
     </p>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -17,25 +17,25 @@
     <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
      </div>
-     <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control", placeholder: "First name" %>
+     <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control", placeholder: "Prénom" %>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
      </div>
-     <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "form-control", placeholder: "Last name" %>
+     <%= f.text_field :last_name, autocomplete: "last_name", class: "form-control", placeholder: "Nom" %>
     </div> <!-- form-group// -->
      <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
      </div>
-     <%= f.text_field :age, autofocus: true, autocomplete: "age", class: "form-control", placeholder: "Age" %>
+     <%= f.text_field :age, autocomplete: "age", class: "form-control", placeholder: "Age" %>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-weight"></i> </span>
      </div>
-     <%= f.text_field :weight, autofocus: true, autocomplete: "weight", class: "form-control", placeholder: "Weight" %>
+     <%= f.text_field :weight, autocomplete: "weight", class: "form-control", placeholder: "Poids" %>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
       <div class="input-group-prepend">
@@ -53,38 +53,46 @@
       <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
      </div>
-       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+       <%= f.email_field :email, autocomplete: "Email", class: "form-control", placeholder: "Email" %>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
       <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
     </div>
-      <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control", placeholder: "Phone" %>
+      <%= f.text_field :phone, autocomplete: "phone", class: "form-control", placeholder: "Téléphone" %>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
       <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-building"></i> </span>
     </div>
-    <%= f.text_field :profession, autofocus: true, autocomplete: "profession", class: "form-control", placeholder: "Profession" %>
+    <%= f.text_field :profession, autocomplete: "profession", class: "form-control", placeholder: "Profession" %>
   </div> <!-- form-group end.// -->
     <div class="form-group input-group">
       <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
     </div>
         
-    <%= f.password_field :password, autocomplete: "new-password",  class: "form-control", placeholder: "Create password (6 char. min)" %>
+    <%= f.password_field :password, autocomplete: "new-password",  class: "form-control", placeholder: "Mot de passe (6 caract. mini)" %>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
       <div class="input-group-prepend">
         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
     </div>
-        <%= f.password_field :password_confirmation, autocomplete: "new-password",  class: "form-control", placeholder: "repeat password" %>   
+        <%= f.password_field :password_confirmation, autocomplete: "new-password",  class: "form-control", placeholder: "Confirmation Mot de Passe" %>   
      </div> <!-- form-group// -->                                      
     <div class="form-group">
-      <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
+      <%= f.submit "Valider", class: "btn btn-primary btn-block" %>
     </div> <!-- form-group// -->      
                                                                      
 <% end %>
 </article>
+<%= link_to "Annuler", :back, class: "btn btn-default btn-block" %>
+
 </div> <!-- card.// -->
+
+<div class="div-main-confidential">
+  <div class="div-confidential">
+  En continuant, j'accepte les conditions générales du service et les règles de la communauté Gracie Barra, et j'ai lu la politique de confidentialité de Gracie Barra.
+</div>
+</div>
 

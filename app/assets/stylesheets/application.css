@@ -169,14 +169,108 @@
 
 /*   ADMIN DASHBOARD */
 
+/*   USER LOGIN */
+
+.div-main-confidential{
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.div-confidential{
+	
+	font-size: small;
+	width: 400px;
+	text-align: center;
+}
+
+.container-login{
+	margin-top: 50px;
+}
+
+/*   USER LOGIN */
+
+/*   USER SECRET PAGE */
+
+.div-container-global{
+	
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+
+}
+
+.div-container-body{
+	
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.div-container-title{
+	display: flex;
+	
+	margin: 5px;
+	padding: 10px 0 10px 20px;
+}
+
+.div-container-belt{
+	display: flex;
+	border: solid;
+	border-radius: 8px;
+	border-width: 1px;
+	margin: 5px;
+	justify-content: space-between;
+	height: 70px;
+}
+
+.div-container-img{
+	border: solid;
+	border-radius: 8px;
+	border-width: 1px;
+	margin: 10px;
+	width: 300px;
+	padding: 5px;
+}
+
+.div-infos-title{
 
 
+}
 
+.div-container-body-infos{
+	display: flex;
+	justify-content: space-between;
+	font-size: x-large;
+	border: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	margin: 5px;
+	
+}
+.div-container-body-infos-sub{
+	display: flex;
+	justify-content: space-between;
+	min-width: 600px;
+	margin: 10px 10% 10px 0;
+	padding: 10px;
 
+}
 
+.div-container-foot{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px;
+}
 
+.div-container-foot-sub{
+	margin: auto;
+	margin-top: 5px; 
 
+}
 
+/*   USER SECRET PAGE */
 
 
 
