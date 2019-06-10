@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'pages/Historique'
   get 'pages/CodeC'
   get 'pages/planning'
@@ -13,10 +14,17 @@ Rails.application.routes.draw do
   devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :charges
+	devise_for :admins
+	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  namespace :admin do
-  	resources :users
-  end
+	resources :charges
+	
+	devise_for :users, controllers: {
+	omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' 
+	}
+	
+	scope '/admin' do
+		resources :users
+	end
   
 end

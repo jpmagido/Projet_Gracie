@@ -18,5 +18,6 @@ class PagesController < ApplicationController
   		puts "$$" * 100
   		puts @user_to_pay
   		puts "$$" * 100
+  		
   end
 end

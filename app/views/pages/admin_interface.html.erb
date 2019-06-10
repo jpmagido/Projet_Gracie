@@ -8,6 +8,8 @@
 <div>
 	<%= link_to "Sign out", destroy_admin_session_path, method: :delete, class:"btn btn-warning btn-lg js-scroll-trigger" %>
 	<%= link_to "Creer un Administrateur", new_admin_registration_path, class: "btn btn-danger btn-lg js-scroll-trigger"%>
+	<%= link_to "Creer un Utilisateur", new_user_path, class: "btn btn-danger btn-lg js-scroll-trigger"%>
+	
 </div>
 </div>
 
@@ -64,8 +66,10 @@
 
 <% @users.each do |v| %>
 <div class="div-admin-table-2">
-			<div class="div-admin-table-bis-4"> <a class="btn btn-primary btn-sm js-scroll-trigger" href="<%= edit_user_registration_path(v.id) %>">Modifier</a>
+			<div class="div-admin-table-bis-4"> 
+				<%= link_to "Modifier", edit_user_path(v.id), class: "btn btn-primary btn-sm js-scroll-trigger"%>
      </div>
+
 			<div class="div-admin-table-1-bis"> <%= v.id %> </div>
 			<div class="div-admin-table-1-long"> <%= if v.first_name != nil; v.first_name.titleize end%></div>
 			<div class="div-admin-table-1-long"> <%= if v.last_name != nil; v.last_name.titleize end %></div>
