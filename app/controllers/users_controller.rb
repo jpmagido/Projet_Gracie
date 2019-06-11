@@ -24,11 +24,21 @@ class UsersController < ApplicationController
       password: params[:user][:password],
       age: params[:user][:age]
       )
-    redirect_to root_path
+    redirect_to pages_admin_interface_path
   end
 
   def edit
     @user_to_edit = User.find(params[:id])
+
+    @user_number = User.find(params[:id]).id
+    @user_age = User.find(params[:id]).age
+    @user_phone = User.find(params[:id]).phone
+    @user_weight = User.find(params[:id]).weight
+    @user_job = User.find(params[:id]).profession
+    @user_email = User.find(params[:id]).email
+    @user_first_name = User.find(params[:id]).first_name
+    @user_last_name = User.find(params[:id]).last_name
+
   end
 
   def update
@@ -37,6 +47,7 @@ class UsersController < ApplicationController
       first_name: params[:user][:first_name],
       belt: params[:user][:belt]
       )
+    redirect_to pages_admin_interface_path
   end
 
   
@@ -45,7 +56,10 @@ class UsersController < ApplicationController
 
   def destroy
 
-    @user.destroy!
+   @user_to_edit = User.find(params[:id])
+   @user_to_edit.destroy
+   redirect_to pages_admin_interface_path
+
   end
 
   private

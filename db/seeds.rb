@@ -69,7 +69,7 @@ def create_formula
 	Formula.create(name: "PP-2", price: 50)
 	Formula.create(name: "PP-1", price: 15)
 
-	puts "Forfaits GB 1, 2 et 3 crées"
+	puts "Tous les forfaits ont été crée"
 end
 
 def create_admin
