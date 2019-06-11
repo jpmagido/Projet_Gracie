@@ -21,7 +21,7 @@ class ChargesController < ApplicationController
 		    customer: customer.id,
 		    amount: @amount,
 		    description: 'Rails Stripe customer',
-		    currency: 'usd',
+		    currency: 'eur',
 		  })
 
 		  Contract.create(user_id: current_user.id ,formula_id: Formula.first.id)

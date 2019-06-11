@@ -262,7 +262,6 @@ Devise.setup do |config|
   config.omniauth :facebook, ENV['APP_ID'], ENV['APP_SECRET'], token_params: { parse: :json }
   config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], {}
   OmniAuth.config.full_host = Rails.env.production? ? 'https://domain.com' : 'http://localhost:3000'
-  provider_ignores_state: true
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
