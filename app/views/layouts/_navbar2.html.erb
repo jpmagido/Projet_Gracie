@@ -18,20 +18,23 @@
             <a class="nav-link" href="#planning">Planning</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#histoire">Historique</a>
+            <a class="nav-link" href="#histoire">Histoire</a>
           </li>
-<li>
-          <div class="dropdown nav-item"> 
-            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon Compte
-            </a>
-           
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <%= link_to 'Profil', pages_secret_page_path(current_user.id), class: "nav-link" %>
-            <%= link_to "Se deconnecter", destroy_user_session_path, class: "nav-link", :method => "delete" %>
-                <a class="nav-link" href="#">Something else here</a>
-              </div>
-
-              
+          <li>
+            
+            <% if user_signed_in? %>
+              <div class="dropdown nav-item"> 
+                <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon Compte
+                </a>
+               
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <%= link_to 'Profil', pages_secret_page_path(current_user.id), class: "nav-link" %>
+                <%= link_to "Déconnexion", destroy_user_session_path, class: "nav-link", :method => "delete" %>
+                    <a class="nav-link" href="#">Something else here</a>
+                </div>
+              </div>  
+            <% end %>
+          
           </li>
         </ul>
       </div>

@@ -24,27 +24,16 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
           <li>
-<li>
-          <div class="dropdown nav-item"> 
-            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon Compte
-            </a>
-              <% if current_user %>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-<%= link_to 'Profil', pages_secret_page_path(current_user.id), class: "nav-link" %>
-<%= link_to "Se deconnecter", destroy_user_session_path, class: "nav-link", :method => "delete" %>
-                <a class="nav-link" href="#">Something else here</a>
-              </div>
-
-              <% else %>
-
+            <div class="dropdown nav-item"> 
+              <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mon Compte
+              </a>              
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-<%= link_to 'LOGIN', new_user_session_path, class: "nav-link" %>
-<%= link_to "S'enregistrer", new_user_registration_path, class: "nav-link" %>
-                <a class="nav-link" href="#">Something else here</a>
+                <%= link_to 'Profil', pages_secret_page_path(current_user.id), class: "nav-link" %>
+                <%= link_to 'Accueil', pages_home_page_path, class: "nav-link" %>
+                <%= link_to "Déconnexion", destroy_user_session_path, class: "nav-link", :method => "delete" %> 
               </div>
             </div>
-
-              <% end %>
           </li>
         </ul>
       </div>
