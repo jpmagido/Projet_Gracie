@@ -2,29 +2,29 @@
 
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg" id="Nav2">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <%= image_tag "LogoGB-2.png", :class => "img-fluid", :style => "width:23%; height:23%;"%>
+      <a class="navbar-brand" href="#page-top">
+        <%= image_tag "LogoGB-2.png", :class => "img-fluid", :style => "width:15%; height:15%;"%>
          GRACIE BARRA PARIS
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="collapse navbar-collapse" >
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#code">Le Code</a>
+            <a class="nav-link" href="#code">Code</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#planning">Planning</a>
+            <a class="nav-link" href="#planning">Planning</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#histoire">Historique</a>
+            <a class="nav-link" href="#histoire">Historique</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Profil</a>
+            <%= link_to 'Profil', pages_secret_page_path, class: "nav-link" %>
           </li>
         </ul>
       </div>
@@ -32,95 +32,62 @@
   </nav>
 
   <!-- Header -->
-  <header class="masthead">
-          <%= image_tag "gbp.jpg", :class => "d-block w-100", :style => "filter:grayscale(20%);"%>
+  <header>
+          <%= image_tag "ban3.jpg", :class => "img-fluid", :style => "filter:grayscale(20%);margin-top:0%;margin-bottom:0%;"%>
   </header>
 
 
 
-  <!-- Services -->
-  <section class="page-section" id="code">
-      <div class="container">
-        <div class="row">
-          <h1 id="title-codec">Code de conduite</h1>
-        <div class="codec-content">
-        <div role="tabpanel">
-            <div class="col-sm-3">
-                <ul class="nav nav-pills brand-pills nav-stacked" role="tablist">
-                    <li role="presentation" class="brand-nav"><a href="#tab1" aria-controls="tab1" role="tab" style="width: 150px;color: black;" data-toggle="tab" >Fraternité</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab2" aria-controls="tab2" role="tab" style="width: 180px;color: black;" data-toggle="tab">Coopération</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab3" aria-controls="tab3" role="tab" style="width: 180px;color: black;" data-toggle="tab">Discipline</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab" style="color: black;">Respect</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab" style="color: black;">Perfectionnement et developpement permanent</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab6" aria-controls="tab6" role="tab" style="width: 180px;color: black;" data-toggle="tab">Leadership</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab7" aria-controls="tab7" role="tab" style="width: 190px;color: black;" data-toggle="tab">Inspiration</a></li>
-                    <li role="presentation" class="brand-nav"><a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab"style="color: black;">Plaisir</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-9">
-                <div class="tab-content" id="codec-tab">
-                    <div role="tabpanel" class="tab-pane active" id="tab1">
-                        <p>
-                         Les Instructeurs de la Gracie Barra doivent renforcer l'esprit de famille chez les élèves, les parents et les autres instructeurs. Leur attitude doit toujours être positive et coopérative, afin de canaliser leur énergie créative dans le but de renforcer et de faire croître notre famille, en faisant toujours passer l'équipe devant les besoins individuels égoïstes.
-                        </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab2">
-                        <p>
-                         Les Instructeurs de la Gracie Barra doivent cultiver et renforcer un environnement de coopération à l'intérieur et en dehors du dojo. Ils doivent s'assurer que l'esprit et l'attitude de compétition sont réservés aux tournois. Ils doivent faire comprendre aux élèves que le progrès ne se reflète pas dans leur capacité à dominer un partenaire d'entraînement ou un concurrent en compétition, mais se reflète plutôt dans leur capacité à participer à une expérience de formation coopérative où le vainqueur est celui qui apprend le plus.
-                        </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab3">
-                        <p>
-                         Les Instructeurs de la Gracie Barra doivent constamment discipliner les élèves et ne jamais les punir. Ils doivent faire comprendre aux élèves que, sans discipline, il n'existe pas de maîtrise, ni en Jiu Jitsu, ni dans la vie, et que sans la volonté du sacrifice, l'excellence n'est tout simplement pas possible à atteindre.
-                        </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab4">
-                        <p>
-                         Les Instructeurs de la Gracie Barra doivent s'assurer que les élèves agissent avec chaleur et égalité les uns envers les autres, indépendamment de leurs différences d'origine, de croyance, de sexe, de nationalité, etc. La hiérarchie des grades de ceintures doit être respectée et l'autorité de la Ceinture Noire sincèrement reconnue. 
-                        </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab5">
-                        <p>
-                         Les Instructeurs de la Gracie Barra doivent insister sur le fait que le Jiu Jitsu Brésilien est un parcours de longue haleine et sans point final. Les élèves doivent considérer la Ceinture Noire comme leur objectif minimum, et que leurs progrès représentent un engagement croissant à leur développement à la fois en tant que pratiquants de JJB qu'en tant qu'être humain. 
-                        </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab6">
-                        <p>
-                         Les Instructeurs de la Gracie Barra doivent prêcher par l'exemple, la bienveillance et l'attention. L'autorité formelle doit toujours être soutenue par leur autorité morale, qui repose sur une attitude positive, coopérative et constructive à l'égard des élèves et des autres instructeurs.
-                        </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab7">
-                        <p>
-                         Les Instructeurs de la Gracie Barra doivent comprendre l'importance qu'ils ont sur la vie des élèves en tant que modèles, ainsi que leur responsabilité à faire ressortir le meilleur en chacun.
-                        </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab8">
-                        <p>
-                         Les Instructeurs de la Gracie Barra doivent considérer le fait d'enseigner à une classe comme un privilège et jamais comme un fardeau. Chaque classe représente la réalisation d'un rêve, l'oeuvre de leur vie. Ils doivent apprécier chaque minute et enseigner, comme si c'était leur dernière chance d'avoir un impact positif sur la vie des élèves.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-  </section>
-
   <!-- Portfolio Grid -->
+<section class="page-section" id="planning">
     <div class="container">
-      <div class="row">
-          <h1 id="title-codec">Planning</h1>
-        <div class="card" style="width: 38%; height: 40%; margin-left: 30%;">
-          <%= image_tag "planning.jpg", :class => "card-img-top"   %>
-        <div class="card-body">
-          <p class="card-text">Voici le planning du moment</p>
-        </div>
+      <div id="page-static">
+        <div class="row">
+            <h1 id="title-codec">Planning</h1>
+          <div class="card" style="">
+            <%= image_tag "planning.jpg", :class => "card-img-top"   %>
+            <div class="card-body">
+              <p class="card-text">Voici le planning du moment</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
+</section>
+  <!-- Services -->
+    <div id="page-static">
+    <h1 id="title-codec">Code de conduite</h1>
+    <h3 id="h3type">L'ecole Gacie Barra est un environnement safe qui encourage lea progression vers le succés</h3><br>
+          <ol>
+        <li>
+          <strong>Fraternit&eacute;:</strong> Les Instructeurs de la Gracie Barra doivent renforcer l'esprit de famille chez les &eacute;l&egrave;ves, les parents et les autres instructeurs. Leur attitude doit toujours &ecirc;tre positive et coop&eacute;rative, afin de canaliser leur &eacute;nergie cr&eacute;ative dans le but de renforcer et de faire cro&icirc;tre notre famille, en faisant toujours passer l'&eacute;quipe devant les besoins individuels &eacute;go&iuml;stes.
+        </li>
+        <li>
+          <strong>Coop&eacute;ration:</strong> Les Instructeurs de la Gracie Barra doivent cultiver et renforcer un environnement de coop&eacute;ration &agrave; l'int&eacute;rieur et en dehors du dojo. Ils doivent s'assurer que l'esprit et l'attitude de comp&eacute;tition sont r&eacute;serv&eacute;s aux tournois. Ils doivent faire comprendre aux &eacute;l&egrave;ves que le progr&egrave;s ne se refl&egrave;te pas dans leur capacit&eacute; &agrave; dominer un partenaire d'entra&icirc;nement ou un concurrent en comp&eacute;tition, mais se refl&egrave;te plut&ocirc;t dans leur capacit&eacute; &agrave; participer &agrave; une exp&eacute;rience de formation coop&eacute;rative o&ugrave; le vainqueur est celui qui apprend le plus.
+        </li>
+        <li>
+          <strong>Discipline:</strong> Les Instructeurs de la Gracie Barra doivent constamment discipliner les &eacute;l&egrave;ves et ne jamais les punir. Ils doivent faire comprendre aux &eacute;l&egrave;ves que, sans discipline, il n'existe pas de ma&icirc;trise, ni en Jiu Jitsu, ni dans la vie, et que sans la volont&eacute; du sacrifice, l'excellence n'est tout simplement pas possible &agrave; atteindre.
+        </li>
+        <li>
+          <strong>Respect:</strong> Les Instructeurs de la Gracie Barra doivent s'assurer que les &eacute;l&egrave;ves agissent avec chaleur et &eacute;galit&eacute; les uns envers les autres, ind&eacute;pendamment de leurs diff&eacute;rences d'origine, de croyance, de sexe, de nationalit&eacute;, etc. La hi&eacute;rarchie des grades de ceintures doit &ecirc;tre respect&eacute;e et l'autorit&eacute; de la Ceinture Noire sinc&egrave;rement reconnue.
+        </li>
+        <li>
+          <strong>Perfectionnement et d&eacute;veloppement permanent:</strong> Les Instructeurs de la Gracie Barra doivent insister sur le fait que le Jiu Jitsu Br&eacute;silien est un parcours de longue haleine et sans point final. Les &eacute;l&egrave;ves doivent consid&eacute;rer la Ceinture Noire comme leur objectif minimum, et que leurs progr&egrave;s repr&eacute;sentent un engagement croissant &agrave; leur d&eacute;veloppement &agrave; la fois en tant que pratiquants de JJB qu'en tant qu'&ecirc;tre humain.
+        </li>
+        <li>
+          <strong>Leadership:</strong> Les Instructeurs de la Gracie Barra doivent pr&ecirc;cher par l'exemple, la bienveillance et l'attention. L'autorit&eacute; formelle doit toujours &ecirc;tre soutenue par leur autorit&eacute; morale, qui repose sur une attitude positive, coop&eacute;rative et constructive &agrave; l'&eacute;gard des &eacute;l&egrave;ves et des autres instructeurs.
+        </li>
+        <li>
+          <strong>Inspiration:</strong> Les Instructeurs de la Gracie Barra doivent comprendre l'importance qu'ils ont sur la vie des &eacute;l&egrave;ves en tant que mod&egrave;les, ainsi que leur responsabilit&eacute; &agrave; faire ressortir le meilleur en chacun.
+        </li>
+        <li>
+          <strong>Plaisir:</strong> Les Instructeurs de la Gracie Barra doivent consid&eacute;rer le fait d'enseigner &agrave; une classe comme un privil&egrave;ge et jamais comme un fardeau. Chaque classe repr&eacute;sente la r&eacute;alisation d'un r&ecirc;ve, l'oeuvre de leur vie. Ils doivent appr&eacute;cier chaque minute et enseigner, comme si c'&eacute;tait leur derni&egrave;re chance d'avoir un impact positif sur la vie des &eacute;l&egrave;ves.
+        </li>
+      </ol>
+    </div>
   <!-- About -->
 <section class="page-section" id="histoire">
+  <div id="page-static">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -215,7 +182,8 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
   <!-- Footer -->
