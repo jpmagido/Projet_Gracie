@@ -1,15 +1,15 @@
-<!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg" id="Nav2">
     <div class="container">
-      <a class="navbar-brand" href="#page-top">
-        <%= image_tag "LogoGB-2.png", :class => "img-fluid", :style => "width:18%; height:18%;"%>
+      <a class="navbar-brand" href=<%= root_path %>>
+        <%= image_tag "LogoGB-2.png", :class => "img-fluid", :style => "width:15%; height:15%;"%>
          GRACIE BARRA PARIS
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="collapse navbar-collapse" >
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">Valeurs</a>
@@ -18,12 +18,13 @@
             <a class="nav-link js-scroll-trigger" href="#portfolio">Cours</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Légende</a>
+            <a class="nav-link js-scroll-trigger" href="#about">Apropos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
           <li>
+<li>
           <div class="dropdown nav-item"> 
             <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon Compte
             </a>
@@ -37,7 +38,7 @@
               <% else %>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-<%= link_to 'Se Connecter', new_user_session_path, class: "nav-link" %>
+<%= link_to 'LOGIN', new_user_session_path, class: "nav-link" %>
 <%= link_to "S'enregistrer", new_user_registration_path, class: "nav-link" %>
                 <a class="nav-link" href="#">Something else here</a>
               </div>
