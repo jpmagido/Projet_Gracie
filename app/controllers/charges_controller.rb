@@ -23,6 +23,9 @@ class ChargesController < ApplicationController
 		    description: 'Rails Stripe customer',
 		    currency: 'eur',
 		  })
+		  
+		  #manque params Formula.find(params[:id])
+		  Contract.create(user_id: current_user.id ,formula_id: Formula.first.id)
 
 		  Contract.create(user_id: current_user.id ,formula_id: Formula.first.id)
 
