@@ -14,7 +14,7 @@ gem 'sendgrid-ruby'
 gem 'paypal-sdk-rest'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
