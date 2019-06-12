@@ -315,7 +315,7 @@
 .div-container-belt{
 	display: flex;
 	border: solid;
-	border-radius: 8px;
+	border-radius: 40px;
 	border-width: 1px;
 	margin: 5px;
 	justify-content: space-between;
@@ -333,21 +333,20 @@
 
 .div-container-body-infos{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	font-size: x-large;
-	border: solid;
-	border-width: 1px;
-	border-radius: 5px;
-	margin: 5px;
+	
 	
 }
 .div-container-body-infos-sub{
 	display: flex;
-	justify-content: space-between;
+	justify-content: row;
 	min-width: 600px;
-	margin: 10px 10% 10px 0;
+	margin: 10px;
 	padding: 10px;
-
+	border: solid;
+	border-width: 1px;
+	border-radius: 5px;
 }
 
 .div-container-foot{
@@ -363,6 +362,36 @@
 
 }
 
+.div-container-title h1{
+	color: #317dc3;
+}
+
+.div-infos-title{
+	color: #317dc3;
+	text-decoration: underline;
+}
+.div-infos-values{
+	margin-left: 30px;
+}
+
+.div-container-body-subscription{
+	border: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+}
+.div-container-body-subscription-title{
+	color: #317dc3;
+	text-decoration: underline;
+	margin-bottom: 30px;
+}
+
+.div-container-body-subscription-content-1{
+	text-decoration: underline;
+	margin-bottom: 10px;
+
+}
 /*   USER SECRET PAGE */
 
 
