@@ -14,10 +14,10 @@
 //= require activestorage
 //= require turbolinks
 //= require agency.min
-//= require jquery
 //= require jquery/jquery.min
+//= require bootstrap/js/bootstrap.bundle.min
 //= require jquery-easing/jquery.easing.min
 //= require jqBootstrapValidation
-//= require bootstrap/js/bootstrap.bundle.min
 //= require contact_me
+
 //= require_tree .
