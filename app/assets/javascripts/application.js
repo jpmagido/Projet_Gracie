@@ -12,7 +12,7 @@
 //
 //= require rails-ujs
 //= require activestorage
-= require turbolinks
+//= require turbolinks
 //= require agency.min
 //= require jquery/jquery.min
 //= require bootstrap/js/bootstrap.bundle.min
