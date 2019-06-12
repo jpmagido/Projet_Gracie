@@ -1,0 +1,32 @@
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-shrink" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href=<%= root_path %>>
+        <%= image_tag "LogoGB-2.png", :class => "img-fluid", :style => "width:10%; height:10%;"%>
+         GRACIE BARRA PARIS
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" >
+        <ul class="navbar-nav text-uppercase ml-auto">
+          
+          
+          <div class="dropdown nav-item"> 
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon Compte
+            </a>
+              
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownID">
+              <%= link_to 'Profil', pages_secret_page_path(current_user.id), class: "nav-link" %>
+              <%= link_to 'Accueil', pages_home_page_path, class: "nav-link" %>
+              <%= link_to "Déconnexion", destroy_user_session_path, class: "nav-link", :method => "delete" %>
+              
+              </div>
+
+              
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
