@@ -12,6 +12,7 @@
         Menu
         <i class="fas fa-bars"></i>
       </button>
+      
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
@@ -29,16 +30,24 @@
           <li class="btn">
             <%= link_to 'LOGIN', new_user_session_path, class: "nav-link js-scroll-trigger" %>
           </li>
+          <li>
+            
+    <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "nav-link js-scroll-trigger" %>
+          </li>
         </ul>
       </div>
     </div>
+    <%= render "layouts/flash" %>
   </nav>
 
   <!-- Header -->
   <header class="masthead">
+    
     <div class="carousel-inner">
+
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-item active">
+
            <%= image_tag "GB-Banner2.jpg", :class => "d-block w-100", :style => "filter:grayscale(30%);"%>
           <div class="carousel-caption d-none d-md-block">
           <h1><mark>Jiu-Jitsu</mark></h1>
