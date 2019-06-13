@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
 	get 'pages/home_page'
 	root 'pages#landing_page'
-	#root to: 'home#index'
 
 	devise_for :admins, controllers: { registrations: 'admins/registrations' }
 	
