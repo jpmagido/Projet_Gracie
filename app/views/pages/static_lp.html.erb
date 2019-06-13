@@ -55,7 +55,7 @@
 										            <h5 class="card-title text-muted text-uppercase text-center">Trimestriel</h5>
 										            <h6 class="card-price text-center">210€</h6>
 										            
-										            <%= form_tag(charges_path, method: 'post') do%>
+										            <%= form_tag(charges_path(params[:id]), method: 'post') do%>
 										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB1-2").ids[0]).price %>" />
 										            
 										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>

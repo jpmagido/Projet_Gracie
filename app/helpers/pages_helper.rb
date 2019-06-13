@@ -36,11 +36,20 @@ module PagesHelper
 	end
 	
 	def current_user_contract_name
-		contract = Contract.where(user_id: current_user.id).ids[0]
-		if contract != nil
-			formula = Contract.find(contract).formula_id
-			formula_name = Formula.find(formula).name
+		begin
+			contract = Contract.where(user_id: current_user.id).ids.last
+			if contract != nil
+				formula = Contract.find(contract).formula_id
+				formula_name = Formula.find(formula).name
+			end
+		rescue
+			contract = Contract.where(user_id: @user_to_edit.id).ids.last
+			if contract != nil
+				formula = Contract.find(contract).formula_id
+				formula_name = Formula.find(formula).name
+			end
 		end
+		
 		
 
 		return formula_name
@@ -48,11 +57,20 @@ module PagesHelper
 	
 
 	def current_user_contract_duration
-		contract = Contract.where(user_id: current_user.id).ids[0]
-		if contract != nil
-			formula = Contract.find(contract).created_at
+		begin
+			contract = Contract.where(user_id: current_user.id).ids.last
+			if contract != nil
+				formula = Contract.find(contract).created_at
+			end
+		rescue
+			contract = Contract.where(user_id: @user_to_edit.id).ids.last
+			if contract != nil
+				formula = Contract.find(contract).formula_id
+				formula_date = Formula.find(formula).created_at
+			end
 		end
-		return formula
+		
+		return formula_date
 	end
 
 	def contract_real_name(id)
@@ -79,11 +97,11 @@ module PagesHelper
 
 	def contract_real_time(data)
 		if data == "GB1-1" || data == "GB2-1" || data == "GB3-1" || data == "BBC-1" || data == "MT-1" || data == "MMA-1" || data == "BF-1"
-			return "1 mois"	
+			return 1
 		elsif data == "GB1-2" || data == "GB2-2" || data == "GB3-2" || data == "BBC-2" || data == "MT-2" || data == "MMA-2" || data == "BF-2"
-			return "3 mois"	
+			return 3
 		elsif data == "GB1-3" || data == "GB2-3" || data == "GB3-3" || data == "BBC-3" || data == "MT-3" || data == "MMA-3" || data == "BF-3"
-			return "12 mois"
+			return 12
 		end
 	end
 
@@ -101,6 +119,19 @@ module PagesHelper
 			return " Padawan"
 		elsif name != nil
 			return name.upcase
+		end
+	end
+	def puts_contract_start
+		begin
+			return "Du: #{current_user_contract_duration.strftime("%m/%d/%Y") }"
+		rescue
+		end
+	end
+	def puts_contract_end
+		begin
+			end_contract = current_user_contract_duration + contract_real_time(current_user_contract_name).month
+			return "Au: #{end_contract.strftime("%m/%d/%Y") }"
+		rescue
 		end
 	end
 end

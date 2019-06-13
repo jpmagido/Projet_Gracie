@@ -3,7 +3,8 @@ class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:secret_page]
   
   def static_lp
-    
+    session[:admin_uid] = params[:format]
+
   end
 
   def landing_page

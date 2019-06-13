@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+
     @user_to_edit = User.find(params[:id])
 
     @user_number = User.find(params[:id]).id
@@ -38,6 +39,7 @@ class UsersController < ApplicationController
     @user_email = User.find(params[:id]).email
     @user_first_name = User.find(params[:id]).first_name
     @user_last_name = User.find(params[:id]).last_name
+    @user_belt = User.find(params[:id]).belt
 
   end
 
