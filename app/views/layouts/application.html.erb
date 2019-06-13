@@ -31,13 +31,16 @@
 
   </head>
   <header>
-    <% if user_signed_in? && current_page?(root_path) %>
+    <% if user_signed_in? || admin_signed_in? && current_page?(root_path) %>
     <%= render "layouts/navbar3" %>
-  <% elsif user_signed_in? && current_page?(pages_home_page_path) %>
+  <% elsif user_signed_in? || admin_signed_in? && current_page?(pages_home_page_path) %>
     <%= render "layouts/navbar2" %>
     
-  <% elsif user_signed_in? %>
+  <% elsif user_signed_in? || admin_signed_in? %>
     <%= render "layouts/navbar4" %>
+    <%= render "layouts/banniere" %>
+  <% elsif user_signed_in? || admin_signed_in? && current_page?(new_charge_path) %>
+  <%= render "layouts/navbarbis" %>
     <%= render "layouts/banniere" %>
   <% elsif current_page?(root_path) %>
     <%= render "layouts/navbar" %>
@@ -48,7 +51,7 @@
     <%= render "layouts/banniere" %>
   <% end %>
   </header>
-  
+
   <body id="page-top">
 
     <%= yield %>
