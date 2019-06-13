@@ -46,7 +46,6 @@ class UsersController < ApplicationController
   def update
     @user_to_edit = User.find(params[:id])
     @user_to_edit.update(
-      first_name: params[:user][:first_name],
       belt: params[:user][:belt]
       )
     redirect_to pages_admin_interface_path

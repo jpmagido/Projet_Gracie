@@ -22,10 +22,12 @@ class PagesController < ApplicationController
       @first_name = " "
       @last_name = " "
       if params[:name] == nil or params[:name] == ""
+        @first_name = " "
+      @last_name = " "
       else
-        @first_name = params[:name].split.first
+        @first_name = params[:name].split.first.downcase
         if params[:name].split.first != params[:name].split.last
-          @last_name = params[:name].split.last
+          @last_name = params[:name].split.last.downcase
         end
       end
   		@users = User.all
