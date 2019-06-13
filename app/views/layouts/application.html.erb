@@ -36,19 +36,25 @@
 
   <% if user_signed_in? && current_page?(root_path) %>
     <%= render "layouts/navbar3" %>
+    <%= render "layouts/footer" %>
   <% elsif user_signed_in? && current_page?(pages_home_page_path) %>
     <%= render "layouts/navbar2" %>
     <%= render "layouts/banniere" %>
+    <%= render "layouts/footer" %>
   <% elsif user_signed_in? %>
     <%= render "layouts/navbar4" %>
     <%= render "layouts/banniere" %>
+    <%= render "layouts/footer" %>
   <% elsif current_page?(root_path) %>
     <%= render "layouts/navbar" %>
+    <%= render "layouts/footer" %>
   <% elsif current_page?(pages_home_page_path) %>
     <%= render "layouts/navbar2" %>
+    <%= render "layouts/footer" %>
   <% else %>
     <%= render "layouts/navbar5" %>
     <%= render "layouts/banniere" %>
+    <%= render "layouts/footer" %>
   <% end %>
 
 
