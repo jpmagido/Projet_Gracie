@@ -18,7 +18,7 @@
             <a class="nav-link js-scroll-trigger" href="#portfolio">Cours</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Apropos</a>
+            <%= link_to 'Tarifs', pages_static_lp_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -38,5 +38,7 @@
         </ul>
       </div>
     </div>
+
   </nav>
   <%= render "layouts/flash" %>
+

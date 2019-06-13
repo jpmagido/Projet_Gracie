@@ -1,6 +1,6 @@
 class AdminMailer < ApplicationMailer
 
-	default from: 'no-reply@monsite.fr'
+	default from: 'no-reply@graciebarraparis75.com'
  
   def welcome_email(admin)
     #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
