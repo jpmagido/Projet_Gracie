@@ -16,6 +16,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 
+
 gem 'omniauth-google-oauth2', '~> 0.4.1'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 
