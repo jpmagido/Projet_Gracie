@@ -12,7 +12,6 @@ module ApplicationHelper
 	end
 
 
-
 	def name_nil(value)
 		if value == nil || value == ""
 			return "Non renseigné"
