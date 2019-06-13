@@ -18,13 +18,21 @@ class PagesController < ApplicationController
     
   end
   def admin_interface
+      @first_name = " "
+      @last_name = " "
+      if params[:name] == nil or params[:name] == ""
+      else
+        @first_name = params[:name].split.first
+        if params[:name].split.first != params[:name].split.last
+          @last_name = params[:name].split.last
+        end
+      end
   		@users = User.all
+
   		@users_number = User.all.count
   		@users_no_paid = User.where("subscription > '0'").count
   		#@user_to_pay = User.find(81).subscription
-  		puts "$$" * 100
-  		puts @user_to_pay
-  		puts "$$" * 100
+  	
   		
   end
 end
