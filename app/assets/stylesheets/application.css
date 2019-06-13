@@ -30,7 +30,7 @@
 /*  STRIPE START*/
 .container-charges{
 	display: flex;
-	
+
 	height: 300px;
 	align-items: center;
 
@@ -65,7 +65,7 @@
 	border: solid;
 	border-width: 1px;
 	width: 50%;
-	
+
 	margin: 20px;
 	border-radius: 3px;
 }
@@ -112,13 +112,13 @@
 }
 
 .div-admin-table-1{
-	
+
 	border-right: solid;
 	border-width: 1px;
 	width: 150px;
 	min-width: 60px;
 	padding: 1px 3px 1px 10px;
-	
+
 }
 .div-admin-table-1-long{
 	border-right: solid;
@@ -126,10 +126,10 @@
 	width: 250px;
 	min-width: 60px;
 	padding: 1px 3px 1px 10px;
-	
+
 }
 .div-admin-table-1-bis{
-	
+
 	border-right: solid;
 	border-width: 1px;
 	width: 35px;
@@ -171,14 +171,14 @@
 
 /* Code de conduite (CodeC) PAGES*/
 #title-codec {
-    margin-left: 33%;	
+    margin-left: 33%;
     margin-bottom: 60px;
     margin-top: 5%;
 }
 
 
 .codec-content {
-	
+
 }
 
 #codec-tab {
@@ -192,21 +192,21 @@
 
 .div-edit-user-all{
 	margin: 0 40px 40px 40px;
-	
+
 }
 .div-edit-user-infos-title{
 	margin: 10px;
-	
+
 }
 .div-edit-user-infos-title-bis{
 	width: 35%;
 	margin: 10px 10px 10px 60px;
-	
+
 
 }
 .div-edit-user-body{
 	margin: 10px;
-	
+
 }
 .div-edit-user-body-number{
 	margin: 10px;
@@ -245,7 +245,7 @@
 }
 
 .div-edit-user-body-buttons{
-	
+
 	margin: 95px 10px 10px 10px;
 	display: flex;
 	flex-direction: column;
@@ -260,7 +260,7 @@
 }
 .div-spe-button{
 	margin-top: 5px;
-	
+
 }
 
 /*   ADMIN EDIT USER */
@@ -275,7 +275,7 @@
 }
 
 .div-confidential{
-	
+
 	font-size: small;
 	width: 400px;
 	text-align: center;
@@ -291,7 +291,7 @@
 /*   USER SECRET PAGE */
 
 .div-container-global{
-	
+
 	display: flex;
 	flex-direction: column;
 	margin: 20px;
@@ -299,7 +299,7 @@
 }
 
 .div-container-body{
-	
+
 	margin: 5px;
 	display: flex;
 	flex-direction: column;
@@ -307,7 +307,7 @@
 
 .div-container-title{
 	display: flex;
-	
+
 	margin: 5px;
 	padding: 10px 0 10px 20px;
 }
@@ -335,8 +335,8 @@
 	display: flex;
 	justify-content: space-around;
 	font-size: x-large;
-	
-	
+
+
 }
 .div-container-body-infos-sub{
 	display: flex;
@@ -358,7 +358,7 @@
 
 .div-container-foot-sub{
 	margin: auto;
-	margin-top: 5px; 
+	margin-top: 5px;
 
 }
 
@@ -403,4 +403,3 @@
 	font-weight: bold;
 }
 /*   HOME PAGE */
-
