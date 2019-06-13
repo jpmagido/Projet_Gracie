@@ -20,9 +20,15 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    # super
+    if current_admin.update(admin_params)
+      current_admin.save
+    end
+    redirect_to root_path
+
+
+  end
 
   # DELETE /resource
   # def destroy
@@ -74,5 +80,8 @@ class Admins::RegistrationsController < Devise::RegistrationsController
 
   def users_params
       params.require(:user).permit(:first_name,:last_name, :age, :phone, :profession, :nationality, :weight, :belt)
-    end
+  end
+  def admin_params
+      params.require(:admin).permit(:first_name,:last_name, :age, :phone, :profession, :nationality, :weight, :belt, :email)
+  end
 end
