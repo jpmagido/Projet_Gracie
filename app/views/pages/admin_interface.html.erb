@@ -60,7 +60,7 @@
 	<div class="div-admin-table-1"> Phone</div>
 	<div class="div-admin-table-bis-3"> Poids</div>
 	<div class="div-admin-table-bis-3"> Ceinture</div>
-	<div class="div-admin-table-1"> Abonnement</div>
+
 	
 </div>
 
@@ -77,8 +77,7 @@
 					<div class="div-admin-table-1"> <%= v.phone %></div>
 					<div class="div-admin-table-bis-3"> <%= v.weight %></div>
 					<div class="div-admin-table-bis-3"> <%= if v.belt != nil; v.belt end %></div>
-					<div class="div-admin-table-1"> <%= paying_code(v.subscription) %></div>
-					<div class="div-admin-table-bis-2"> <%= rights_code(v.admin_rights) %></div>
+					
 
 		</div>
 	<% elsif (@first_name == " ") && (@last_name == " ") %>
@@ -93,8 +92,7 @@
 					<div class="div-admin-table-1"> <%= v.phone %></div>
 					<div class="div-admin-table-bis-3"> <%= v.weight %></div>
 					<div class="div-admin-table-bis-3"> <%= if v.belt != nil; v.belt end %></div>
-					<div class="div-admin-table-1"> <%= paying_code(v.subscription) %></div>
-					<div class="div-admin-table-bis-2"> <%= rights_code(v.admin_rights) %></div>
+					
 
 		</div>	
 	<% else %>	
