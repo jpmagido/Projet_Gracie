@@ -12,13 +12,12 @@ module ApplicationHelper
 	end
 
 
-
 	def name_nil(value)
 		if value == nil || value == ""
 			return "Non renseigné"
 		else
 			return value
-		end	
+		end
 	end
 
 	def name_nil_1(value)
@@ -26,7 +25,7 @@ module ApplicationHelper
 			return "Non renseigné"
 		else
 			return "#{value} ans"
-		end	
+		end
 	end
 
 	def name_nil_2(value)
@@ -34,7 +33,7 @@ module ApplicationHelper
 			return "Non renseigné"
 		else
 			return "#{value} Kg."
-		end	
+		end
 
 	end
 end
