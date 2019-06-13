@@ -36,7 +36,8 @@
 					<div class="div-spe">
 						Ceinture
 					</div>
-						<select id="user_time_zone" name="user[belt]" class="form-control">
+						<select id="user_time_zone" name="user[belt]" class="form-control" >
+							
 						  <option value="Blanche">Blanche</option>
 						  <option value="Bleue">Bleue</option>
 						  <option value="Violette">Violette</option>
@@ -49,9 +50,37 @@
 					</div>
 				<% end %>
 			</div>
+
+			<div class="div-container-body-subscription">
+	        <div class="div-container-body-subscription-title">
+	          ABONNEMENT
+	        </div>
+	        <div class="div-container-body-subscription-content">
+	          <div class="div-container-body-subscription-content-1">
+	            <%= contract_real_name(current_user_contract_name) %>
+	          </div>
+
+	        <div>
+	          <%= puts_contract_start %>
+	        </div>
+	        <div>
+	          <%= puts_contract_end %>
+	        </div>
+	        <div class="text-center">
+	          <% if contract_real_time(current_user_contract_name) != nil %> 
+	          <%= contract_real_time(current_user_contract_name) %> mois
+	          <% else %>
+	          <strong>Aucun</strong>
+	          <% end %>
+	        </div>
+	        </div>
+	        
+	      </div>
+
+
 			<div class="div-edit-user-body-buttons">
 				<div class="div-spe-button">
-				<%= link_to "Encaisser l'Utilisateur", new_charge_path, class: "btn btn-success btn-lg js-scroll-trigger"%>
+				<%= link_to "Encaisser l'Utilisateur", pages_static_lp_path(@user_to_edit), class: "btn btn-success btn-lg js-scroll-trigger"%>
 				</div>
 				<div class="div-spe-button">
 					<%= link_to "Supprimer l'Utilisateur", user_path(@user_to_edit), method: :delete, class: "btn btn-danger btn-lg js-scroll-trigger", :data => {:confirm => 'Etes-vous certain ?'}%>
