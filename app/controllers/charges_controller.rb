@@ -1,4 +1,6 @@
 class ChargesController < ApplicationController
+	before_action :authenticate_user!
+	
 	attr_accessor :sub
 	def new
 		@amount = flash[:price]
