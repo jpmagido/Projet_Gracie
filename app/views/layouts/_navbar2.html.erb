@@ -12,6 +12,9 @@
       <div class="collapse navbar-collapse" >
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
+            <%= link_to 'Tarifs', pages_static_lp_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#code">Code</a>
           </li>
           <li class="nav-item">
@@ -38,5 +41,7 @@
         </ul>
       </div>
     </div>
+
     <%= render "layouts/flash" %>
+
   </nav>

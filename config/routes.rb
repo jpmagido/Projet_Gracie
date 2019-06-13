@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 	get 'pages/static_lp'
 	get 'pages/secret_page'
 	get 'pages/admin_interface'
+
 	post 'pages/admin_interface', to: 'pages#admin_interface'
+
 	get 'pages/home_page'
 	root 'pages#landing_page'
 	#root to: 'home#index'
