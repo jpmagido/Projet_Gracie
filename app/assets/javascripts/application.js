@@ -12,20 +12,8 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
-//  <!-- Bootstrap core JavaScript -->
-//= require jquery/jquery.min
-//= require bootstrap/js/bootstrap.bundle.min
-//  <!-- Plugin JavaScript -->
-//= require jquery-easing/jquery.easing.min
-//  <!-- Custom scripts for this template -->
 
-//
-//
-//
-//
-//
-
+//= require agency.min
 //= require jquery/jquery.min
 //= require bootstrap/js/bootstrap.bundle.min
 //= require jquery-easing/jquery.easing.min

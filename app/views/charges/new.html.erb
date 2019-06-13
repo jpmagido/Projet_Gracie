@@ -1,6 +1,6 @@
 <div class="container-charges">
   <div class="container-1-charges">
-    <%= form_tag charges_path do %>
+    <%= form_tag charges_path(@user_to_edit) do %>
     <input type="hidden" id="price" name="price" size="1" value="<%= @amount %>"/>
       <article>
         <% if flash[:error].present? %>
