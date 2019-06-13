@@ -8,6 +8,7 @@ module ApplicationHelper
 	    when 'error' then "alert-danger"
 	    when 'alert' then "alert-warning"
 	  end
+	end
 
 
 	def name_nil(value)
