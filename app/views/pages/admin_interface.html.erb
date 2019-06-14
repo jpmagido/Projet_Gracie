@@ -5,11 +5,7 @@
  <h2>Gestion des Utilisateurs</h2>
  
 </div>
-<div>
-	<%= link_to "Sign out", destroy_admin_session_path, method: :delete, class:"btn btn-warning btn-lg js-scroll-trigger" %>
-	<%= link_to "Creer un Utilisateur", new_user_path, class: "btn btn-danger btn-lg js-scroll-trigger"%>
-	
-</div>
+
 </div>
 
 <hr>
@@ -29,12 +25,14 @@
 	</div>
 	<div class="div-admin-stats-bis">
 		<div class="div-admin-stats-1">
-			<input type="text" id="form-control-1" class="form-control" placeholder="User Email" aria-label="Recipient's username" aria-describedby="button-addon2">
-			<input type="text" id="form-control-1" class="form-control" placeholder="Montant" aria-label="Recipient's username" aria-describedby="button-addon2">
-			
+			<%= link_to "Sign out", destroy_admin_session_path, method: :delete, class:"btn btn-warning btn-lg js-scroll-trigger" %>
 		</div>
 		<div class="div-admin-stats-1">
-			<%= link_to "Encaisser un Utilisateur", new_charge_path, class: "btn btn-success btn-lg js-scroll-trigger"%>
+			<div>
+	
+	<%= link_to "Creer un Utilisateur", new_user_path, class: "btn btn-danger btn-lg js-scroll-trigger"%>
+	
+</div>
 		</div>
 	</div>
 </div>

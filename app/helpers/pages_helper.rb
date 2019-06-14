@@ -52,8 +52,6 @@ module PagesHelper
 			end
 		end
 		
-		
-
 		return formula_name
 	end
 	
@@ -127,6 +125,7 @@ module PagesHelper
 		begin
 			return "Du: #{current_user_contract_duration.strftime("%m/%d/%Y") }"
 		rescue
+			return 
 		end
 	end
 	def puts_contract_end
@@ -134,6 +133,7 @@ module PagesHelper
 			end_contract = current_user_contract_duration + contract_real_time(current_user_contract_name).month
 			return "Au: #{end_contract.strftime("%m/%d/%Y") }"
 		rescue
+			return 
 		end
 	end
 
