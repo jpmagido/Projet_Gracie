@@ -9,8 +9,10 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # Show full error reports.
+  # Show full error reports. !!!!!! true
+   # Renvoi les error 404 au lieu des no routes match quand c'est a false
   config.consider_all_requests_local = true
+  config.exceptions_app = self.routes
 
 
   # Enable/disable caching. By default caching is disabled.
@@ -62,7 +64,9 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
-  config.action_mailer.delivery_method = :letter_opener
+  #config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true
 
 end
+
+
