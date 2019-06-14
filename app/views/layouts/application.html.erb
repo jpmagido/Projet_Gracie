@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
- 
+
     <script src="https://kit.fontawesome.com/b73e119146.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -15,16 +15,16 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <link href="https://fonts.googleapis.com/css?family=Archivo:500i|Josefin+Sans:600i|Overpass:600i|Prompt:500i&display=swap" rel="stylesheet">
-    
+
     <title>GracieHaApp</title>
-    
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-      
+
 
 
       <script src="https://kit.fontawesome.com/b73e119146.js"></script>
@@ -38,7 +38,7 @@
     <%= render "layouts/navbar3" %>
   <% elsif user_signed_in? && current_page?(pages_home_page_path) %>
     <%= render "layouts/navbar2" %>
-    
+
   <% elsif user_signed_in? %>
     <%= render "layouts/navbar4" %>
     <%= render "layouts/banniere" %>
@@ -53,7 +53,7 @@
 
 
     <%= yield %>
-    
+
   <%= render "layouts/footer" %>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
