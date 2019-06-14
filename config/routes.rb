@@ -16,7 +16,9 @@ Rails.application.routes.draw do
 	resources :messages, only: [:new, :create]
 	resources :charges
 	
-	devise_for :users
+	devise_for :users, controllers: {
+	omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations', sessions: 'users/sessions' 
+	}
 	
 	scope '/admin' do
 		resources :users
