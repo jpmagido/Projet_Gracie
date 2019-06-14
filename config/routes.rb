@@ -23,6 +23,9 @@ Rails.application.routes.draw do
 	scope '/admin' do
 		resources :users
 	end
-
+	
+	match "/404", to: "erreurs#page_introuvable", via: :all
+  	match "/422", to: "erreurs#erreur_interne", via: :all
+  	match "/500", to: "erreurs#erreur_interne", via: :all
   
 end
