@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 	devise_for :admins, controllers: { registrations: 'admins/registrations' }
 	
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+	resources :messages, only: [:new,:create]
 	resources :charges
 	
 	devise_for :users, controllers: {
@@ -23,7 +23,6 @@ Rails.application.routes.draw do
 	scope '/admin' do
 		resources :users
 	end
-
 	
 	match "/404", to: "erreurs#page_introuvable", via: :all
   	match "/422", to: "erreurs#erreur_interne", via: :all

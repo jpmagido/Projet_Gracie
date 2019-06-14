@@ -1,6 +1,6 @@
 
 
-  <!-- Header -->
+  <!-- Header / Caroussel -->
   <header class="masthead">
     
     <div class="carousel-inner">
@@ -51,7 +51,7 @@
 
 
 
-  <!-- Services -->
+  <!-- Valeurs -->
   <section class="page-section" id="services">
     <div class="container">
       <div class="row">
@@ -86,7 +86,7 @@
     </div>
   </section>
 
-  <!-- Portfolio Grid -->
+  <!-- Portfolio Cours -->
   <section class="bg-light page-section" id="portfolio">
     <div class="container">
       <div class="row">
@@ -184,7 +184,7 @@
     </div>
   </section>
 
-  <!-- About -->
+  <!-- Our legends -->
   <section class="page-section" id="about">
     <div class="container">
       <div class="row">
@@ -346,8 +346,9 @@
       </div>
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Gracie Barra 2019</p>
-        </div>
+        <p class="large text-muted">Gracie Barra Paris 2019</p>
+        <p class="large text-muted">Adresse: 7 Rue Ganneron, 75018 Paris </p>
+        <p class="large text-muted">Tel: 06 13 49 94 74</p>
       </div>
     </div>
   </section>
@@ -359,29 +360,33 @@
   <!--Google Maps-->
 
   <!-- Clients -->
+  <!-- Clients -->
   <section class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://us12.campaign-archive.com/?u=cfd7d68369a02011b493ad073&id=27d3367a66&fbclid=IwAR2aE-bAJEbR8b8RVvc1wIvqfEyU1QRMtX1yEBEbmhg_AWpzaUprhBLD5Fg">
+            <%= image_tag "BBF_FINALLOGO.png", :class => "img-fluid d-block mx-auto", :style => "width: 130px; height: 130px; filter:grayscale(90%); opacity: 0.3"   %>
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://www.facebook.com/DixDixParis/">
+            <%= image_tag "LOGONEW10X10.png", :class => "img-fluid d-block mx-auto", :style => "width: 130px; height: 130px; opacity: 0.3"    %>
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://monkeytapeco.com/">
+            <%= image_tag "mktape-logo.png", :class => "img-fluid d-block mx-auto", :style => "width: 130px; height: 130px; opacity: 0.3"    %>
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://armbarsoap.com/">
+            <%= image_tag "TABSC-logo.png", :class => "img-fluid d-block mx-auto", :style => "width: 135px; height: 135px; filter:grayscale(90%) ;opacity: 0.3"    %>
           </a>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Contact -->
   <section class="page-section" id="contact">
     <div class="container">
@@ -393,25 +398,25 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+          <%= form_tag messages_path, method: 'post', id:"contactForm", name: "sentMessage"  do %>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input class="form-control" id="name" type="text" placeholder="Votre Nom *" required="required" data-validation-required-message="Please enter your name.">
+                  <input class="form-control" id="name_visitor" type="text" placeholder="Votre Nom *" required="required" data-validation-required-message="Please enter your name." name="name">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="email" type="email" placeholder="Votre Email *" required="required" data-validation-required-message="Please enter your email address.">
+                  <input class="form-control" id="email_visitor" type="email" placeholder="Votre Email *" required="required" data-validation-required-message="Please enter your email address." name="email">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="phone" type="tel" placeholder="Votre Téléphone *" required="required" data-validation-required-message="Please enter your phone number.">
+                  <input class="form-control" id="phone_visitor" type="tel" placeholder="Votre Téléphone *" required="required" data-validation-required-message="Please enter your phone number." name="phone">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <textarea class="form-control" id="message" placeholder="Votre Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <textarea class="form-control" id="text_visitor" placeholder="Votre Message *" required="required" data-validation-required-message="Please enter a message." name="text"></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -421,7 +426,7 @@
                 <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Envoyer</button>
               </div>
             </div>
-          </form>
+          <% end %>
         </div>
       </div>
     </div>
@@ -430,7 +435,7 @@
   <!-- Footer -->
 
 
-  <!-- Portfolio Modals -->
+  <!-- Portfolio Cours Modals -->
 
   <!-- Modal 1 -->
   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -633,169 +638,6 @@
                 <%= link_to "S'inscrire", new_user_registration_path, class:"btn btn-primary" %>
                 <% end %>
                 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!---- Modal 7 ---->
-  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="polconf">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Politique modèle de confidentialité.</h2>
-               <p> Introduction
-                Devant le développement des nouveaux outils de communication, il est  nécessaire de porter une attention particulière à la protection de la  vie privée.  C'est pourquoi, nous nous engageons à respecter la confidentialité des  renseignements personnels que nous collectons.
-                Collecte des renseignements personnels
-                Nous collectons les renseignements suivants :</p>
-                    <p>
-                      Nom, Prenom, Adresse Postale, Code postal, Adresse electronique, Numero de téléphone, Numéro de carte de crédit, Genre, Age,    Origines, Scolarité / Formation, Profession, Description physique
-                    </p>
-                    <p>
-                      Les renseignements personnels que nous collectons sont recueillis au travers de formulaires et grâce à l'interactivité établie entre vous et notre site Web. Nous utilisons également, comme indiqué dans la section suivante, des fichiers témoins et/ou journaux pour réunir des informations vous concernant.
-                    </p>
-                    <p>
-                      Vos renseignements personnels sont collectés par le biais de formulaire, à savoir :</p>
-                    <p>
-                      Formulaire d'inscription au site Web et Formulaire de commande
-                    </p>
-                    <p>
-                      Nous utilisons les renseignements ainsi collectés pour les finalités suivantes :
-                    </p>
-                    <p>
-                      Suivi de la commande
-                      Informations / Offres promotionnelles
-                      Statistiques
-                      Contact
-                      Gestion du site Web (présentation, organisation)
-                    </p>
-                    <p>
-                      Vos renseignements sont également collectés par le biais de  l'interactivité pouvant s'établir entre vous et notre site Web et ce, de  la façon suivante:
-                    </p>
-                    <p>
-                      Statistiques
-                      Contact
-                      Gestion du site Web (présentation, organisation)
-                      Nous utilisons les renseignements ainsi collectés pour les finalités suivantes :
-                    </p>
-                    <p>
-                      Forum ou aire de discussion
-                      Commentaires
-                      Correspondances
-                    </p>
-                    <p>
-                      Fichiers journaux et témoins
-                      Nous recueillons certaines informations par le biais de fichiers  journaux (log file) et de fichiers témoins (cookies). Il s'agit  principalement des informations suivantes :</p>
-                    <p>
-                      Pages visitées et requêtes, Heure et jour de connexion
-                    </p>
-                    <p>
-                      Le recours à de tels fichiers nous permet :
-                      Amélioration du service et accueil personnalisé et un
-                      Profil personnalisé de consommation
-                    </p>
-                    <p>
-                      Statistique
-                    </p>
-                    <p>
-                      Droit d'opposition et de retrait
-                    </p>
-                    <p>
-                      Nous nous engageons à vous offrir un droit d'opposition et de retrait quant à vos renseignements personnels.
-                      Le droit d'opposition s'entend comme étant la possiblité offerte aux internautes de refuser que leurs renseignements      personnels soient utilisées à certaines fins mentionnées lors de la collec
-
-                      Le droit de retrait s'entend comme étant la possiblité offerte aux internautes de demander à ce que leurs      renseignements personnels ne figurent plus, par exemple, dans une liste de diffusion.
-                    </p>
-                  <p>
-                    Pour pouvoir exercer ces droits, vous pouvez :
-                    Code postal :  96 RUE ST DOMINIQUE 75007 PARIS , PARIS 75007
-                    Section du site web : https://gracie-ha-app.herokuapp.com/
-                  </p>
-                  <p>
-                    Droit d'accès
-                  </p>
-                  <p>
-                    Nous nous engageons à reconnaître un droit d'accès et de rectification aux personnes      concernées désireuses de consulter, modifier, voire radier les informations les concerna
-                    L'exercice de ce droit se fera :
-                    Code postal :  96 RUE ST DOMINIQUE 75007 PARIS , PARIS 75007
-                    Section du site web : https://gracie-ha-app.herokuapp.com/
-                  </p>
-                  <p>
-                    Sécurité
-                  </p>
-                  <p>
-                    Les renseignements personnels que nous collectons sont conservés      dans un environnement sécurisé. Les personnes travaillant pour nous  sont tenues de respecter la confidentialité de vos information.
-                  </p>
-                  <p>
-                    Pour assurer la sécurité de vos renseignements personnels, nous avons recours aux mesures suivantes :
-                  </p>
-                  <p>
-                      Protocole SSL (Secure Sockets Layer), 
-                      Protocole SET (Secure Electronic Transaction), 
-                      Gestion des accès - personne autorisée, 
-                      Gestion des accès - personne concernée, 
-                      Identifiant / mot de passe
-                  </p>
-                  </p>
-                  <p>
-                  Nous nous engageons à maintenir un haut degré de confidentialité en  intégrant les dernières innovations technologiques permettant d'assurer      la confidentialité de vos transactions. Toutefois, comme aucun  mécanisme n'offre une sécurité maximale, une part de risque est toujours  présente      lorsque l'on utilise Internet pour transmettre des renseignements  perso
-                  </p>
-                  <p>
-                    Enfants
-                  Notre site Web contient des sections destinées aux enfants.      La collecte de leurs renseignements personnels se fait avec      le consentement des parents ou du représentant de l'enfant.             
-                  Nous demandons le consentement de ces derniers par un formulaire d'inscription
-                  </p>
-                  <p>
-                    Législation
-                  Nous nous engageons à respecter les dispositions législatives énoncées dans :
-                  la loi pour une République numérique
-                  </p>               
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!---- Modal 8 ---->
-  <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="polconf">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Politique modèle de confidentialité.</h2>
-                  <p>"En naviguant sur notre site, l’internaute reconnaît avoir pris connaissance et accepté nos conditions générales d’utilisation</p>
-                  <p>Données personnelles :</p>
-                  <p>Les données personnelles qui peuvent vous être demandées (exclusivement en vue de recevoir notre newsletter) sont vos nom prénom et adresse mails.<br />Le traitement de ces données dont le responsable est Mr J. Rolle est en conformité avec le Règlement général de protection des données personnelles entré en vigueur le 25 Mai 2018.<br />Vous pouvez faire valoir vos droits de consultation, de rectification et de suppression en le contactant à l’adresse suivante [e-mail]<br />Nous nous engageons à ne pas revendre ni donner ces informations qui ne sont pas conservées dès lors que vous demandez à ne plus recevoir notre newsletter.</p>
-                  <p>Cookies :</p>
-                  <p>En vue d’améliorer notre site, nous utilisons Google Analytics qui est un outil « d'analyse d'audience Internet permettant aux propriétaires de sites Web et d'applications de mieux comprendre le comportement de leurs utilisateurs. Cet outil peut utiliser des cookies pour collecter des informations et générer des rapports sur les statistiques d'utilisation d'un site Web sans que les utilisateurs individuels soient identifiés personnellement par Google. <br />Outre la génération de rapports sur les statistiques d'utilisation d'un site Web, Google Analytics permet également, en association avec certains des cookies publicitaires décrits ci-dessus, d'afficher des annonces plus pertinentes sur les sites Google (tels que la recherche Google) et sur le Web. »<br /><a target="_blank" href="https://www.google.fr/intl/fr/policies/technologies/types/">https://www.google.fr/intl/fr/policies/technologies/types/</a> <br />Nous utilisons également les cookies nécessaires à l’amélioration de votre navigation sur notre site tenant compte exclusivement de votre navigateur.</p>
-                  <p>Propriété intellectuelle :</p>
-                  <p>Le site web a été réalisé par notre webmaster, Mme Rose Fougère. <br />Il est la propriété de l’association et ne peut faire l’objet de reproduction.</p>
-                  <p>Photographies et contenu :</p>
-                  <p>Les photographies, vidéos, textes et illustrations publiés sur le site sont propriété de l’association ou ont fait l’objet de cession de droits.<br />Ils ne peuvent faire l’objet d’aucune réutilisation.</p>
-                  <p>Liens hypertextes :</p>
-                  <p>Le site <a href="www.gracie-ha-app.herokuapp.com">Gracie </a>peut contenir des liens hypertextes renvoyant à des pages ou des sites dont le contenu ne peut engager en rien l’association.<br />Les liens hypertextes renvoyant vers notre site sont les bienvenus lorsqu’ils émanent de sites respectant la législation en vigueur."</p>
               </div>
             </div>
           </div>
