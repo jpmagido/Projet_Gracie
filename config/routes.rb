@@ -23,5 +23,7 @@ Rails.application.routes.draw do
 	scope '/admin' do
 		resources :users
 	end
+
+	mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   
 end
