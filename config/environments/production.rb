@@ -94,6 +94,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Change to TRUE if you actually want to send mails
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = false
   
 end
