@@ -8,5 +8,8 @@ class ApplicationController < ActionController::Base
 	  devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(attributes)}
 	end
 
+	  def render_not_found
+	    render :file => "#{RAILS_ROOT}/public/404.html",  :status => 404
+	  end
 	
 end
