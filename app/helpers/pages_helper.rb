@@ -1,4 +1,6 @@
 module PagesHelper
+	
+	 
 
 	def rights_code(number)
 		if number == 0
@@ -134,6 +136,8 @@ module PagesHelper
 		rescue
 		end
 	end
+
+ 
 end
 
 
