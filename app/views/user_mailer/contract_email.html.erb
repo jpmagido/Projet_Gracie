@@ -8,7 +8,13 @@
 	
 	<h1>Salut <%= @user.first_name %>, nous te souhaitons un bon apprentissage au sein de la famille Gracie !</h1>
     <p>
-      Ton inscription au cours est validée via ton email: <%= @user.email %>.
+      Ton inscription au cours est validée via ton email: <%= @user.email %>
+    </p>
+    <p> 
+      Nom cours : <%= @formula_name %>
+    </p>
+    <p>
+      Prix cours: <%= @formula_price %>
     </p>
     <p>
       Pour accéder à ton espace client, connecte-toi via : <%= @url %>.

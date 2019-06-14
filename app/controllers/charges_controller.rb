@@ -1,8 +1,13 @@
 class ChargesController < ApplicationController
+	
+		#before_action :authenticate_user! or :authenticate_admin!
+	
+
 	attr_accessor :sub
 	def new
 		@amount = flash[:price]
-		
+		p session[:admin_uid]
+		p params
 	end
 
 	def create
@@ -25,15 +30,20 @@ class ChargesController < ApplicationController
 		  })
 		  
 		  #manque params Formula.find(params[:id])
-		  Contract.create(user_id: current_user.id ,formula_id: Formula.first.id)
+		  begin
+		  	Contract.create(user_id: current_user.id ,formula_id: Formula.where(price: @amount).ids[0])
+		  rescue
+		  	Contract.create(user_id: session[:admin_uid] ,formula_id: Formula.where(price: @amount).ids[0])
+		  end
 
-		  Contract.create(user_id: current_user.id ,formula_id: Formula.first.id)
+		
 
 		rescue Stripe::CardError => e
 		  flash[:error] = e.message
 		  flash[:price] = @amount
+		  # flash[:user] = @user_to_edit
 		  redirect_to new_charge_path
-		
-	end
+		end
+	
 		
 end

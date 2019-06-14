@@ -38,7 +38,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Mensuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Mensuel</h6>
 										            <h6 class="card-price text-center">75€</h6>
 										            <%= form_tag(charges_path, method: 'post') do%>
 										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB1-1").ids[0]).price %>" />
@@ -52,10 +52,10 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Trimestriel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Trimestriel</h6>
 										            <h6 class="card-price text-center">210€</h6>
 										            
-										            <%= form_tag(charges_path, method: 'post') do%>
+										            <%= form_tag(charges_path(params[:id]), method: 'post') do%>
 										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB1-2").ids[0]).price %>" />
 										            
 										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
@@ -67,7 +67,7 @@
 										      <div class="col-lg-4">
 										        <div class="card">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Annuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Annuel</h6>
 										            <h6 class="card-price text-center">550€</h6>
 										           
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -90,7 +90,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Mensuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Mensuel</h6>
 										            <h6 class="card-price text-center">85€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -105,7 +105,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Trimestriel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Trimestriel</h6>
 										            <h6 class="card-price text-center">240€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -120,7 +120,7 @@
 										      <div class="col-lg-4">
 										        <div class="card">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Annuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Annuel</h6>
 										            <h6 class="card-price text-center">650€</h6>
 										           
 										            
@@ -144,7 +144,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Mensuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Mensuel</h6>
 										            <h6 class="card-price text-center">90€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -159,7 +159,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Trimestriel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Trimestriel</h6>
 										            <h6 class="card-price text-center">250€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -174,7 +174,7 @@
 										      <div class="col-lg-4">
 										        <div class="card">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Annuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Annuel</h6>
 										            <h6 class="card-price text-center">700€</h6>
 										           
 										            
@@ -198,7 +198,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Mensuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Mensuel</h6>
 										            <h6 class="card-price text-center">100€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -213,7 +213,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Trimestriel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Trimestriel</h6>
 										            <h6 class="card-price text-center">300€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -228,7 +228,7 @@
 										      <div class="col-lg-4">
 										        <div class="card">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Annuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Annuel</h6>
 										            <h6 class="card-price text-center">800€</h6>
 										           
 										            
@@ -272,7 +272,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Mensuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Mensuel</h6>
 										            <h6 class="card-price text-center">75€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -287,7 +287,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Trimestriel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Trimestriel</h6>
 										            <h6 class="card-price text-center">200€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -302,7 +302,7 @@
 										      <div class="col-lg-4">
 										        <div class="card">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Annuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Annuel</h6>
 										            <h6 class="card-price text-center">450€</h6>
 										           
 										            
@@ -327,7 +327,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Mensuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Mensuel</h6>
 										            <h6 class="card-price text-center">100€</h6>
 										            
 										           <%= form_tag(charges_path, method: 'post') do%>
@@ -342,7 +342,7 @@
 										      <div class="col-lg-4">
 										        <div class="card mb-5 mb-lg-0">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Trimestriel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Trimestriel</h6>
 										            <h6 class="card-price text-center">250€</h6>
 										            
 										            <%= form_tag(charges_path, method: 'post') do%>
@@ -357,7 +357,7 @@
 										      <div class="col-lg-4">
 										        <div class="card">
 										          <div class="card-body">
-										            <h5 class="card-title text-muted text-uppercase text-center">Annuel</h5>
+										            <h6 class="card-title text-muted text-uppercase text-center">Annuel</h6>
 										            <h6 class="card-price text-center">700€</h6>
 										           
 										            
@@ -394,7 +394,7 @@
 					      <div class="col-lg-4">
 					        <div class="card mb-5 mb-lg-0">
 					          <div class="card-body">
-					            <h5 class="card-title text-muted text-uppercase text-center">Mensuel</h5>
+					            <h6 class="card-title text-muted text-uppercase text-center">Mensuel</h6>
 					            <h6 class="card-price text-center">50€</h6>
 					            
 					            <%= form_tag(charges_path, method: 'post') do%>
@@ -409,7 +409,7 @@
 					      <div class="col-lg-4">
 					        <div class="card mb-5 mb-lg-0">
 					          <div class="card-body">
-					            <h5 class="card-title text-muted text-uppercase text-center">Trimestriel</h5>
+					            <h6 class="card-title text-muted text-uppercase text-center">Trimestriel</h6>
 					            <h6 class="card-price text-center">150€</h6>
 					            
 					            <%= form_tag(charges_path, method: 'post') do%>
@@ -424,7 +424,7 @@
 					      <div class="col-lg-4">
 					        <div class="card">
 					          <div class="card-body">
-					            <h5 class="card-title text-muted text-uppercase text-center">Annuel</h5>
+					            <h6 class="card-title text-muted text-uppercase text-center">Annuel</h6>
 					            <h6 class="card-price text-center">250€</h6>
 					           
 					            
@@ -455,7 +455,7 @@
 					      <div class="col-lg-6">
 					        <div class="card mb-5 mb-lg-0">
 					          <div class="card-body">
-					            <h5 class="card-title text-muted text-uppercase text-center">En groupe</h5>
+					            <h6 class="card-title text-muted text-uppercase text-center">En groupe</h6>
 					            <h6 class="card-price text-center">15€</h6>
 					            
 					            <%= form_tag(charges_path, method: 'post') do%>
@@ -470,7 +470,7 @@
 					      <div class="col-lg-6">
 					        <div class="card">
 					          <div class="card-body">
-					            <h5 class="card-title text-muted text-uppercase text-center">Individuel</h5>
+					            <h6 class="card-title text-muted text-uppercase text-center">Individuel</h6>
 					            <h6 class="card-price text-center">50€</h6>
 					           
 					            
@@ -501,7 +501,7 @@
 					      <div class="col-lg-6">
 					        <div class="card mb-5 mb-lg-0">
 					          <div class="card-body">
-					            <h5 class="card-title text-muted text-uppercase text-center">En groupe</h5>
+					            <h6 class="card-title text-muted text-uppercase text-center">En groupe</h6>
 					            <h6 class="card-price text-center">15€ / séance</h6>
 					            
 					            <%= form_tag(charges_path, method: 'post') do%>
@@ -516,7 +516,7 @@
 					      <div class="col-lg-6">
 					        <div class="card">
 					          <div class="card-body">
-					            <h5 class="card-title text-muted text-uppercase text-center">Individuel</h5>
+					            <h6 class="card-title text-muted text-uppercase text-center">Individuel</h6>
 					            <h6 class="card-price text-center">50€ / séance</h6>
 					           
 					            
@@ -548,7 +548,7 @@
 					      <div class="col-lg-6">
 					        <div class="card mb-5 mb-lg-0">
 					          <div class="card-body">
-					            <h5 class="card-title text-muted text-uppercase text-center">1 COURS / SEMAINE</h5>
+					            <h6 class="card-title text-muted text-uppercase text-center">1 COURS / SEMAINE</h6>
 					            <h6 class="card-price text-center">275€</h6>
 					            <hr>
 						            <ul class="fa-ul">
@@ -566,7 +566,7 @@
 					      <div class="col-lg-6">
 					        <div class="card">
 				          		<div class="card-body">
-						            <h5 class="card-title text-muted text-uppercase text-center">Illimité</h5>
+						            <h6 class="card-title text-muted text-uppercase text-center">Illimité</h6>
 						            <h6 class="card-price text-center">375€</h6>
 						           	<hr>
 							            <ul class="fa-ul">

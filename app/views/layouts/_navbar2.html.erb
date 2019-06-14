@@ -11,9 +11,7 @@
       </button>
       <div class="collapse navbar-collapse" >
         <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <%= link_to 'Tarifs', pages_static_lp_path, class: "nav-link" %>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#code">Code</a>
           </li>
@@ -23,25 +21,44 @@
           <li class="nav-item">
             <a class="nav-link" href="#histoire">Histoire</a>
           </li>
+          <li class="nav-item">
+            <%= link_to 'Tarifs', pages_static_lp_path, class: "nav-link" %>
+          </li>
           <li>
-            
+          
+              <div class="dropdown nav-item" > 
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Mon Compte
+            </a>
+
             <% if user_signed_in? %>
-              <div class="dropdown nav-item"> 
-                <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon Compte
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownID">
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownID">
                 <%= link_to 'Profil', pages_secret_page_path(current_user.id), class: "nav-link" %>
-                <%= link_to "Déconnexion", destroy_user_session_path, class: "nav-link", :method => "delete" %>
-                    <a class="nav-link" href="#">Something else here</a>
-                </div>
-              </div>  
+                <%= link_to 'Accueil', pages_home_page_path, class: "nav-link" %>
+                <%= link_to "Déconnexion", destroy_user_session_path, class: "nav-link", :method => "delete" %> 
+              </div>
+            <% elsif admin_signed_in? %>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownID">
+                <%= link_to 'DashBoard', pages_admin_interface_path(current_admin.id), class: "nav-link" %>
+                <%= link_to 'Accueil', pages_home_page_path, class: "nav-link" %>
+                <%= link_to "Déconnexion", destroy_admin_session_path, class: "nav-link", :method => "delete" %> 
+              </div>
+              <% else %>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownID">
+                <%= link_to 'Accueil', pages_home_page_path, class: "nav-link" %>
+                <%= link_to 'Se Connecter', new_user_session_path, class: "nav-link" %>
+                <%= link_to "S'enregistrer", new_user_registration_path, class: "nav-link" %>
+              </div>
             <% end %>
+            
+              
+            </div>
+            
           
           </li>
         </ul>
       </div>
     </div>
 
-    <%= render "layouts/flash" %>
-
   </nav>
+  <%= render "layouts/flash" %>
+

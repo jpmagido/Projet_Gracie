@@ -60,12 +60,12 @@
 	<div class="div-admin-table-1"> Phone</div>
 	<div class="div-admin-table-bis-3"> Poids</div>
 	<div class="div-admin-table-bis-3"> Ceinture</div>
-	<div class="div-admin-table-1"> Abonnement</div>
-	<div class="div-admin-table-bis-2"> Droits</div>
+
+	
 </div>
 
 <% @users.each do |v| %>
-	<% if v.first_name.downcase.match?(@first_name.downcase) or v.last_name.downcase.match?(@last_name.downcase) %>
+	<% if v.first_name.downcase.match?(@first_name) or v.last_name.downcase.match?(@last_name) %>
 		<div class="div-admin-table-2">
 					<div class="div-admin-table-bis-4"> 
 						<%= link_to "Modifier", edit_user_path(v.id), class: "btn btn-primary btn-sm js-scroll-trigger"%></div>
@@ -77,8 +77,7 @@
 					<div class="div-admin-table-1"> <%= v.phone %></div>
 					<div class="div-admin-table-bis-3"> <%= v.weight %></div>
 					<div class="div-admin-table-bis-3"> <%= if v.belt != nil; v.belt end %></div>
-					<div class="div-admin-table-1"> <%= paying_code(v.subscription) %></div>
-					<div class="div-admin-table-bis-2"> <%= rights_code(v.admin_rights) %></div>
+					
 
 		</div>
 	<% elsif (@first_name == " ") && (@last_name == " ") %>
@@ -93,8 +92,7 @@
 					<div class="div-admin-table-1"> <%= v.phone %></div>
 					<div class="div-admin-table-bis-3"> <%= v.weight %></div>
 					<div class="div-admin-table-bis-3"> <%= if v.belt != nil; v.belt end %></div>
-					<div class="div-admin-table-1"> <%= paying_code(v.subscription) %></div>
-					<div class="div-admin-table-bis-2"> <%= rights_code(v.admin_rights) %></div>
+					
 
 		</div>	
 	<% else %>	
