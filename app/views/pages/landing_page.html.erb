@@ -346,8 +346,9 @@
       </div>
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Gracie Barra 2019</p>
-        </div>
+        <p class="large text-muted">Gracie Barra Paris 2019</p>
+        <p class="large text-muted">Adresse: 7 Rue Ganneron, 75018 Paris </p>
+        <p class="large text-muted">Tel: 06 13 49 94 74</p>
       </div>
     </div>
   </section>
@@ -359,29 +360,33 @@
   <!--Google Maps-->
 
   <!-- Clients -->
+  <!-- Clients -->
   <section class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://us12.campaign-archive.com/?u=cfd7d68369a02011b493ad073&id=27d3367a66&fbclid=IwAR2aE-bAJEbR8b8RVvc1wIvqfEyU1QRMtX1yEBEbmhg_AWpzaUprhBLD5Fg">
+            <%= image_tag "BBF_FINALLOGO.png", :class => "img-fluid d-block mx-auto", :style => "width: 130px; height: 130px; filter:grayscale(90%); opacity: 0.3"   %>
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://www.facebook.com/DixDixParis/">
+            <%= image_tag "LOGONEW10X10.png", :class => "img-fluid d-block mx-auto", :style => "width: 130px; height: 130px; opacity: 0.3"    %>
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://monkeytapeco.com/">
+            <%= image_tag "mktape-logo.png", :class => "img-fluid d-block mx-auto", :style => "width: 130px; height: 130px; opacity: 0.3"    %>
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://armbarsoap.com/">
+            <%= image_tag "TABSC-logo.png", :class => "img-fluid d-block mx-auto", :style => "width: 135px; height: 135px; filter:grayscale(90%) ;opacity: 0.3"    %>
           </a>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Contact -->
   <section class="page-section" id="contact">
     <div class="container">
@@ -393,25 +398,25 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+          <%= form_tag messages_path, method: 'post', id:"contactForm", name: "sentMessage"  do %>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input class="form-control" id="name" type="text" placeholder="Votre Nom *" required="required" data-validation-required-message="Please enter your name.">
+                  <input class="form-control" id="name_visitor" type="text" placeholder="Votre Nom *" required="required" data-validation-required-message="Please enter your name." name="name">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="email" type="email" placeholder="Votre Email *" required="required" data-validation-required-message="Please enter your email address.">
+                  <input class="form-control" id="email_visitor" type="email" placeholder="Votre Email *" required="required" data-validation-required-message="Please enter your email address." name="email">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="phone" type="tel" placeholder="Votre Téléphone *" required="required" data-validation-required-message="Please enter your phone number.">
+                  <input class="form-control" id="phone_visitor" type="tel" placeholder="Votre Téléphone *" required="required" data-validation-required-message="Please enter your phone number." name="phone">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <textarea class="form-control" id="message" placeholder="Votre Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <textarea class="form-control" id="text_visitor" placeholder="Votre Message *" required="required" data-validation-required-message="Please enter a message." name="text"></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -421,7 +426,7 @@
                 <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Envoyer</button>
               </div>
             </div>
-          </form>
+          <% end %>
         </div>
       </div>
     </div>
