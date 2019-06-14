@@ -95,6 +95,6 @@ Rails.application.configure do
 
   # Change to TRUE if you actually want to send mails
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'gracie-ha-app.herokuapp.com' }
+  
   
 end
