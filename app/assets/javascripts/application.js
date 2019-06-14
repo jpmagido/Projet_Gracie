@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
-
 //= require agency.min
 //= require jquery/jquery.min
 //= require bootstrap/js/bootstrap.bundle.min
