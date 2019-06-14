@@ -177,9 +177,6 @@
 }
 
 
-.codec-content {
-	
-}
 
 #codec-tab {
 	margin-top: 10%;
@@ -189,7 +186,9 @@
 
 /*   ADMIN EDIT USER */
 
-
+.container-1{
+	margin: 20px;
+}
 .div-edit-user-all{
 	margin: 0 40px 40px 40px;
 	
@@ -403,4 +402,19 @@
 	font-weight: bold;
 }
 /*   HOME PAGE */
+
+/*   CHARGES / STRIPE  */
+
+.container-2{
+	margin: 80px 0 100px 0;
+	padding: 30px;
+	text-align: center;
+}
+/*   CHARGES / STRIPE  */
+
+
+
+
+
+
 

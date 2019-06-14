@@ -1,4 +1,8 @@
 class ChargesController < ApplicationController
+	
+		#before_action :authenticate_user! or :authenticate_admin!
+	
+
 	attr_accessor :sub
 	def new
 		@amount = flash[:price]
@@ -39,7 +43,7 @@ class ChargesController < ApplicationController
 		  flash[:price] = @amount
 		  # flash[:user] = @user_to_edit
 		  redirect_to new_charge_path
-		
-	end
+		end
+	
 		
 end
