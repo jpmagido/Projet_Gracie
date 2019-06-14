@@ -19,5 +19,5 @@
 //= require jquery-easing/jquery.easing.min
 //= require jqBootstrapValidation
 //= require contact_me
-
+= require turbolinks
 //= require_tree .
