@@ -12,12 +12,7 @@ gem 'binding_of_caller'
 gem 'dotenv-rails'
 gem 'sendgrid-ruby'
 gem 'paypal-sdk-rest'
-gem 'omniauth'
-gem 'omniauth-facebook'
-
-
-
-gem 'omniauth-google-oauth2', '~> 0.4.1'
+gem 'rubyzip', '>= 1.3.0'
 
 
 
